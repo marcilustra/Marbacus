@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marbacus</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="logic.js"></script>
 </head>
 <body>
@@ -15,33 +18,33 @@
                 <input type="text" id="display">
             </div>
             <div class="inputs">
-                <input type="button" value="AC">
-                <input type="button" value="DEL">
-                <input type="button" value=".">
-                <input type="button" value="/">
+                <input type="button" value="AC" class="delete">
+                <input type="button" value="DEL" class="delete">
+                <input type="button" value="." class="sign">
+                <input type="button" value="/" class="sign">
             </div>
             <div class="inputs">
                 <input type="button" value="9">
                 <input type="button" value="8">
                 <input type="button" value="7">
-                <input type="button" value="*">
+                <input type="button" value="*" class="sign">
             </div>
             <div class="inputs">
                 <input type="button" value="6">
                 <input type="button" value="5">
                 <input type="button" value="4">
-                <input type="button" value="-">
+                <input type="button" value="-" class="sign">
             </div>
             <div class="inputs">
                 <input type="button" value="3">
                 <input type="button" value="2">
                 <input type="button" value="1">
-                <input type="button" value="+">
+                <input type="button" value="+" class="sign">
             </div>
             <div class="inputs" id="bottom">
                 <input type="button" value="00">
                 <input type="button" value="0">
-                <input type="button" value="=" class="equal-sign">
+                <input type="button" value="=" class="equal-sign sign">
                 
             </div>
         </form>
