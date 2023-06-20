@@ -53,11 +53,17 @@
     width: 250px;
     background-image: linear-gradient(to top left, #243f2e, rgb(16, 91, 22));
 }
-.inputs .equal-sign:hover {
+.equal-sign:hover:enabled {
     background-image: linear-gradient(to top left, #285a3a, rgb(24, 142, 34));
 }
-.inputs .equal-sign:active {
+.equal-sign:hover:disabled {
+    background-image: linear-gradient(to top left, #142b1c, rgb(9, 46, 12));
+}
+.inputs .equal-sign:active:enabled {
     background-image: linear-gradient(to top left, #184d2c, rgb(9, 113, 61));
+}
+.inputs .equal-sign:disabled {
+    background-image: linear-gradient(to top left, #1b42326f, rgba(16, 78, 47, 0.388));
 }
 .inputs .sign {
     font-size: 36px;
@@ -88,7 +94,7 @@
     margin: 10px 0;
 }
 
-.inputs input:hover {
+.inputs input:hover:enabled {
     background-color: #5278aa;
     background-image: linear-gradient(to bottom right, #394f81, rgb(33, 47, 118));
     color: rgb(228, 238, 240);
@@ -104,7 +110,7 @@
     height: 50%;
     background: linear-gradient(rgba(255,255,255, 0.8), rgba(255,255,255,0.2));
 }
-.inputs input:active {
+.inputs input:active:enabled {
     background-color: #486c82;
     background-image: linear-gradient(to top left, #242d3f, rgb(10, 11, 38));
 }
