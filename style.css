@@ -1,5 +1,6 @@
 .container {
-    background-color: #62a7e3;
+    background-color: rgb(98, 167, 227);
+    background-image: linear-gradient(to bottom right, rgb(102, 175, 238), rgb(61, 118, 197));
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -9,8 +10,9 @@
 .calc-body {
     background-color: #22243a;
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow: 10px 20px #692f95a1;
+    padding: 10px 10px;
 }
 .calc-body .display {
     display: flex;
@@ -34,6 +36,16 @@
     display: flex;
     justify-content: space-around;
 }
+.calc-body #bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.calc-body #bottom input  {
+    width: 150px;
+}
+.inputs .equal-sign {
+    width: 250px;
+}
 .inputs input{
     background-color: transparent;
     border: transparent;
@@ -42,7 +54,7 @@
     color: aliceblue;
     font-family: 'Arial Narrow', sans-serif;
     font-size: 20px;
-    width: 100px;
+    width: 120px;
     height: 60px;
     margin: 10px 0;
 }
