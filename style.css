@@ -41,7 +41,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 .calc-body #bottom input  {
-    width: 150px;
+    width: 165px;
 }
 .inputs .equal-sign {
     width: 250px;
