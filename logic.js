@@ -1,4 +1,4 @@
-function Hello()
-{
-    document.write("Hello, child");
+function clearField () {
+    let input = document.getElementById("display");
+    input.value = '';
 }
