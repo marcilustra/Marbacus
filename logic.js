@@ -35,3 +35,10 @@ function clearField () {
     input.value = '';
     button.disabled = true;
 }
+
+function appendVal(val) {
+    if (input.value.length != 10) {
+        input.value += val;
+    }
+    
+}
