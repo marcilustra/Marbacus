@@ -38,10 +38,10 @@
 }
 /* .calc-body .inputs {
     display: grid;
-    /* justify-content: space-around; */
-    grid-template-columns: repeat(4, 25%);
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 25%); 
     
-} */
+ } */
 .calc-body #bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -94,7 +94,7 @@
     margin: 10px 0;
 }
 
-.inputs .sign {
+.inputs .sign:not(.equal-sign) {
     background-image: linear-gradient(to bottom right, #3e4c6d, rgb(64, 101, 128));
 }
 .inputs input:hover:enabled {
