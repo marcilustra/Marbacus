@@ -48,15 +48,18 @@ function appendVal(val) {
 }
 
 function signIt (val) {
-    if (!input.value.includes(val)) {
+    //Check for max length reach and if value includes the . sign already
+    if (!input.value.includes(val) & input.value.length != 10) {
         input.value += val;
     }
 }
 
 function del() {
+    //Check if display has numbers
     if(input.value.length != 0) {
         input.value = input.value.substring(0, input.value.length -1);
     }
+    //Reset the Equal button to disabled when there is nothing on display
     if (input.value.length == 0) {
         button.disabled = true;
     }
