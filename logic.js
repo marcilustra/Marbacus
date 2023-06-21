@@ -47,6 +47,12 @@ function appendVal(val) {
     
 }
 
+function signIt (val) {
+    if (!input.value.includes(val)) {
+        input.value += val;
+    }
+}
+
 function del() {
     if(input.value.length != 0) {
         input.value = input.value.substring(0, input.value.length -1);
