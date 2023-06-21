@@ -12,6 +12,24 @@ input.addEventListener('input', function() {
   }
 });
 
+input.addEventListener('keydown', function(event) {
+
+    const keyCode = event.keyCode || event.which;
+
+    if (
+        !(
+            keyCode === 8 ||
+            keyCode === 9 ||
+            keyCode === 13 ||
+            keyCode === 27 ||
+            (keyCode >= 48 && keyCode <= 57) ||
+            (keyCode >= 96 && keyCode <= 105)
+        )
+    ) {
+        event.preventDefault();
+    }
+})
+
 function clearField () {
     let input = document.getElementById("display");
     input.value = '';
