@@ -7,15 +7,14 @@
     <title>Marbacus</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <script src="logic.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <form class="calc-body">
             <div class="display">
-                <input type="text" id="display">
+                <input type="text" id="display" class="display" contenteditable="false">
             </div>
             <div class="inputs">
                 <input type="button" value="AC" id="clear" onclick="clearField()" class="delete">
@@ -44,10 +43,12 @@
             <div class="inputs" id="bottom">
                 <input type="button" value="00">
                 <input type="button" value="0">
-                <input type="button" value="=" class="equal-sign sign" disabled>
-                
+                <input type="button" value="=" id="button" class="equal-sign sign" disabled>         
             </div>
         </form>
     </div>
+    <footer>
+        <script src="logic.js"></script>
+    </footer>
 </body>
 </html>
