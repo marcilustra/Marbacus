@@ -42,3 +42,10 @@ function appendVal(val) {
     }
     
 }
+
+function del() {
+    if(input.value.length != 0) {
+        input.value = input.value.substring(0, input.value.length -1);
+    }
+    
+}
