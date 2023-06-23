@@ -49,37 +49,10 @@
 .calc-body #bottom input  {
     width: 153px;
 }
-.inputs .equal-sign {
-    width: 250px;
-    background-image: linear-gradient(to top left, #243f2e, rgb(16, 91, 22));
-}
-.equal-sign:hover:enabled {
-    background-image: linear-gradient(to top left, #285a3a, rgb(24, 142, 34));
-}
-.equal-sign:hover:disabled {
-    background-image: linear-gradient(to top left, #142b1c, rgb(9, 46, 12));
-}
-.inputs .equal-sign:active:enabled {
-    background-image: linear-gradient(to top left, #184d2c, rgb(9, 113, 61));
-}
-.inputs .equal-sign:disabled {
-    background-image: linear-gradient(to top left, #1b42326f, rgba(16, 78, 47, 0.388));
-}
-.inputs .sign {
-    font-size: 36px;
-}
-.inputs .delete {
-    background-color: red;
-    background-image: linear-gradient(to top left, #4d1b29, rgb(141, 25, 70));
-    color: white;
-}
-.inputs .delete:hover {
-    background-color: rgb(255, 114, 114);
-    background-image: linear-gradient(to top left, #702339, rgb(199, 36, 79));
-}
-.inputs .delete:active {
-    background-image: linear-gradient(to top left, #551426, rgb(145, 18, 86));
-}
+
+
+
+/*BASE INPUT CLASS RULES*/
 .inputs input{
     background-color: transparent;
     background-image: linear-gradient(to bottom right, #253657, rgb(28, 46, 96));
@@ -94,10 +67,7 @@
     margin: 10px 0;
 }
 
-.inputs .sign:not(.equal-sign) {
-    background-image: linear-gradient(to bottom right, #3e4c6d, rgb(64, 101, 128));
-}
-.inputs input:hover:enabled {
+.inputs input:hover:not(.delete):not(.sign):not(.equal-sign) {
     background-color: #5278aa;
     background-image: linear-gradient(to bottom right, #394f81, rgb(33, 47, 118));
     color: rgb(228, 238, 240);
@@ -105,7 +75,60 @@
     box-shadow: 5px 10px #5cb3f282;
 }
 
-.inputs input:active:enabled {
+.inputs input:active:not(.sign):not(.delete):not(.equal-sign) {
     background-color: #486c82;
-    background-image: linear-gradient(to top left, #242d3f, rgb(10, 11, 38));
+    background-image: linear-gradient(to top left, #28334a, rgb(19, 21, 71));
+}
+
+
+
+/* Equal sign rules */
+.inputs .equal-sign {
+    width: 250px;
+    background-image: linear-gradient(to top left, #243f2e, rgb(16, 91, 22));
+}
+.inputs .equal-sign:hover:enabled {
+    background-image: linear-gradient(to top left, #285a3a, rgb(24, 142, 34));
+}
+.inputs .equal-sign:hover:disabled {
+    background-image: linear-gradient(to top left, #142b1c, rgb(9, 46, 12));
+}
+.inputs .equal-sign:active:enabled {
+    background-image: linear-gradient(to top left, #184d2c, rgb(9, 113, 61));
+}
+.inputs .equal-sign:disabled {
+    background-image: linear-gradient(to top left, #1b42326f, rgba(16, 78, 47, 0.388));
+}
+
+
+
+/*Delete Buttons Rules*/
+.inputs .delete {
+    background-color: red;
+    background-image: linear-gradient(to top left, #4d1b29, rgb(141, 25, 70));
+    color: white;
+}
+.inputs .delete:hover {
+    background-color: rgb(255, 114, 114);
+    background-image: linear-gradient(to top left, #702339, rgb(199, 36, 79));
+}
+.inputs .delete:active {
+    background-image: linear-gradient(to top left, #551426, rgb(145, 18, 86));
+}
+
+/*ARITHIMEIC SIGN RULES*/
+.inputs .sign {
+    font-size: 36px;
+}
+.inputs .sign:not(.equal-sign):disabled {
+    background-image: linear-gradient(to bottom right, #363d4f, rgb(56, 77, 92));
+}
+.inputs .operator:not(.equal-sign) {
+    background-image: linear-gradient(to bottom right, #3e4c6d, rgb(64, 101, 128));
+}
+.inputs .operator:hover {
+    background-image: linear-gradient(to bottom right, #3e5d7f, rgb(62, 130, 161));
+}
+.inputs .operator:active {
+    background-image: linear-gradient(to bottom right, #314374, rgb(40, 84, 139));
 }
