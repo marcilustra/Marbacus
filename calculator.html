@@ -19,31 +19,31 @@
             <div class="inputs">
                 <input type="button" value="AC" id="clear" onclick="clearField()" class="delete">
                 <input type="button" value="DEL" class="delete" onclick="del()">
-                <input type="button" value="." class="sign" onclick="signIt(this.value)">
-                <input type="button" value="/" class="sign" onclick="signIt(this.value)">
+                <input type="button" value="." id="dot" disabled class="sign operator" onclick="signIt(this.value)" >
+                <input type="button" value="/" id="divide" disabled class="sign operator" onclick="signIt(this.value)">
             </div>
             <div class="inputs">
-                <input type="button" value="9" onclick="appendVal(this.value)">
-                <input type="button" value="8" onclick="appendVal(this.value)">
-                <input type="button" value="7" onclick="appendVal(this.value)">
-                <input type="button" value="*" class="sign" onclick="signIt(this.value)">
+                <input type="button" value="9" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="8" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="7" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="*" id="times" disabled class="sign operator" onclick="signIt(this.value)">
             </div>
             <div class="inputs">
-                <input type="button" value="6" onclick="appendVal(this.value)">
-                <input type="button" value="5" onclick="appendVal(this.value)">
-                <input type="button" value="4" onclick="appendVal(this.value)">
-                <input type="button" value="-" class="sign" onclick="signIt(this.value)">
+                <input type="button" value="6" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="5" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="4" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="-" id="minus" disabled class="sign operator" onclick="signIt(this.value)">
             </div>
             <div class="inputs">
-                <input type="button" value="3" onclick="appendVal(this.value)">
-                <input type="button" value="2" onclick="appendVal(this.value)">
-                <input type="button" value="1" onclick="appendVal(this.value)">
-                <input type="button" value="+" class="sign" onclick="signIt(this.value)">
+                <input type="button" value="3" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="2" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="1" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="+" id="add" class="sign operator" disabled onclick="signIt(this.value)">
             </div>
             <div class="inputs" id="bottom">
-                <input type="button" value="00" onclick="appendVal(this.value)">
-                <input type="button" value="0" onclick="appendVal(this.value)">
-                <input type="button" value="=" id="button" class="equal-sign sign" disabled>         
+                <input type="button" value="00" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="0" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="=" id="button" class="equal-sign sign" onclick="compute()" disabled>         
             </div>
         </form>
     </div>
