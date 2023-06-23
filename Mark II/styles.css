@@ -11,8 +11,40 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    height: 810px;
-    width: 450px;
+    height: 900px;
+    width: 500px;
     background-color: aliceblue;
     border-radius: 10px;
+}
+
+#calculator {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 450px;
+    height: 855px;
+    border-radius: 10px;
+    background-color: rgb(214, 227, 238);
+}
+
+.display {
+    margin: 15px auto;
+    height: 142.5px;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+.display .top {
+    padding-top: 15px;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.display .bottom {
+    margin-top: 10px;
+    margin-right: 15px;
+    padding-top: 15px;
+    font-size: 36px;
 }
