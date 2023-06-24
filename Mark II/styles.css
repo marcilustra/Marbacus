@@ -5,23 +5,20 @@ html {
 }
 
 #container {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     height: 900px;
     width: 500px;
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.083);
     border-radius: 10px;
 }
 
 #calculator {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    display: flex;
+    
+    margin: auto;
     width: 450px;
     height: 855px;
     border-radius: 10px;
@@ -47,4 +44,25 @@ html {
     margin-right: 15px;
     padding-top: 15px;
     font-size: 36px;
+}
+
+.buttons {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    border-radius: 10px;
+    width: 100%;
+    height: 660px;
+    background-color: rgb(187, 196, 203);
+    margin-bottom: 10px;
+}
+
+.row input {
+    background-color: azure;
+    width: 100px;
+    height: 120px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
 }
