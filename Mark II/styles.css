@@ -78,13 +78,16 @@ html {
 }
 
 .row .number:hover {
+    background-color: #e0f7ff;
     background-image: linear-gradient(to bottom, #e0f9fa, #aedeee);
 }
 .row .sign {
+    background-color: #98dbdd;
     background-image: linear-gradient(to bottom, #8d969b, #727e9b);;
 }
 .row .sign:hover{
-    background-image: linear-gradient(to bottom, #b8cdd1, #7ca3b9);;
+    background-color: #c5f1f3;
+    background-image: linear-gradient(to bottom, #c7e1e7, #a1cae1);;
 }
 .row #equal-sign {
     background-image: linear-gradient(to bottom, #90ffc0, #68b868);
