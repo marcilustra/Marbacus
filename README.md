@@ -2,14 +2,8 @@
 A simple HTML CSS and JS Calculator.
 The name is a play on Marc and Abacus. (poorly done).
 
-## Mark 1
-Uses eval() (semi-safely since all input is restricted to only numbers and operator strings but not entirely: you can Ctrl + V invalid inputs)
-
-Operations availbale:
-    1. Add
-    2. Subtract
-    3. Multiply
-    4. Divide
+# Navigation
+[Mark 1](#mark-1)
 
 ## Mark II
 First major change from Mark I is the theme. 
@@ -21,3 +15,12 @@ Level 2 displays 0 by default, the current input, and result of a completed oper
 ### The Buttons
 #### Delete and AC
 DEL removes the last character of the bottom display and sets its to zero if the last character is deleted as well.
+
+## Mark 1
+Uses eval() (semi-safely since all input is restricted to only numbers and operator strings but not entirely: you can Ctrl + V invalid inputs)
+
+Operations availbale:
+    1. Add
+    2. Subtract
+    3. Multiply
+    4. Divide
