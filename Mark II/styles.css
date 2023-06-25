@@ -38,15 +38,17 @@ html {
     box-shadow: 0px 0px 50px 5px #bfffda99;
 }
 .display .top {
-    margin-top: 5px;
+    margin-top: 25px;
     height: 35px;
     margin-right: 15px;
-    font-size: 18px;
+    font-size: 21px;
+    overflow: hidden;
 }
 .display .bottom {
-    height: 70px;
+    height: 50px;
     margin-right: 15px;
-    font-size: 36px;
+    font-size: 48px;
+    overflow: hidden;
 }
 
 .buttons {
