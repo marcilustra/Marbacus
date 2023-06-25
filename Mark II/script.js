@@ -39,9 +39,12 @@ function delEat () {
 
 function plus(val) {
     var bottomText = document.getElementById("bottom").textContent;
-    document.getElementById("top").textContent += bottomText + " " + val;
-    left = document.getElementById("top").textContent;
+    left += parseFloat(document.getElementById("bottom").textContent);
     if (left) {
         document.getElementById("bottom").textContent = "0";
     }
+    right = parseFloat(document.getElementById("bottom").textContent.slice(-1));
+    answer = parseFloat(left) + parseFloat(right);
+    document.getElementById("top").textContent = answer + " " + val;
+    console.log(answer);
 }
