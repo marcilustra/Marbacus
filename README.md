@@ -10,3 +10,14 @@ Operations availbale:
     2. Subtract
     3. Multiply
     4. Divide
+
+## Mark II
+First major change from Mark I is the theme. 
+Mark II uses a light blue theme with a glowing cyan display that has two levels.
+
+Level 1 displays the value of the current operation being carried out.
+Level 2 displays 0 by default, the current input, and result of a completed operation, valid or invalid with a corresponding error message.
+
+### The Buttons
+#### Delete and AC
+DEL removes the last character of the bottom display and sets its to zero if the last character is deleted as well.
