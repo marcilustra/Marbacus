@@ -11,17 +11,21 @@ answer = 132
 var answer = 0;
 var left = 0;
 var right = 0;
+var answered = false;
 
 //Clears the display and the three variables as well.
 function clearDisplay() {
     document.getElementById("top").textContent = "";
     document.getElementById("bottom").textContent = "0";
 }
+
+function wipeVars() {
+    left = 0;
+    right = 0;
+    answer = 0;
+}
 function clearAll() {
     clearDisplay();
-    left = "";
-    right = "";
-    answer = "";
 }
 
 function delEat () {
@@ -38,11 +42,17 @@ function delEat () {
 function appendNumber (val) {
     var labelText = document.getElementById("bottom").textContent;
     //Check if the value is the default zero to replace it with a different number
-    if(labelText === "0") {
+    if(answered) {
+        wipeVars();
+        console.log(answer);
+    }
+    if(labelText === "0" || answered) {
         document.getElementById("bottom").textContent = val;
+        answered = false;
     } else {
         document.getElementById("bottom").textContent += val;
     }
+
 }
 
 //Places a single decimal point on a number.
@@ -66,7 +76,6 @@ function plus(val) {
 }
 
 function displayFinal () {
-    console.log("Answer should be output here.");
     let finaloperand = document.getElementById("top").textContent.slice(-1);
     switch(finaloperand) {
         case '+':
@@ -75,4 +84,6 @@ function displayFinal () {
     }
     document.getElementById("bottom").textContent = answer;
     document.getElementById("top").textContent = "";
+    answered = true;
+    console.log("Answer: " + answer);
 }
