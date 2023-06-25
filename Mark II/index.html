@@ -34,7 +34,7 @@
                             <input type='button' class="number" value="6" onclick="appendNumber(this.value)">
                             <input type='button' class="number" value="5" onclick="appendNumber(this.value)">
                             <input type='button' class="number" value="4" onclick="appendNumber(this.value)">
-                            <input type='button' class="sign" id="add" value="+">
+                            <input type='button' class="sign" id="add" value="+" onclick="plus(this.value)">
                         </div>
                         <div class="row">
                             <input type='button' class="number" value="3" onclick="appendNumber(this.value)">
@@ -46,7 +46,7 @@
                             <input type='button' class="number" id="zero" value="0" onclick="appendNumber(this.value)">
                             <input type='button' class="number" id="dot" value="." onclick="dotIT(this.value)">
                             <input type='button' class="sign" id="sqrt" value="&Sqrt;">
-                            <input type='button' id="equal-sign" value="=">
+                            <input type='button' id="equal-sign" value="=" onclick="compute()">
                         </div>
                     </div>
                 </div>
