@@ -28,6 +28,9 @@ function clearAll() {
     clearDisplay();
 }
 
+/*The delEat function wipes both top and bottom displays
+Bottom is cleaned one by one till the last
+Top if the final character of bottom has been deleted down to 0*/
 function delEat () {
     var labelText = document.getElementById("bottom").textContent;
 
@@ -41,11 +44,13 @@ function delEat () {
 //Adds the number value of the button to the bottom display string
 function appendNumber (val) {
     var labelText = document.getElementById("bottom").textContent;
-    //Check if the value is the default zero to replace it with a different number
     if(answered) {
         wipeVars();
         console.log(answer);
     }
+     //Check if the value is the default zero or if 
+     // we are currently displaying answer 
+     // to replace it with the value of the input button
     if(labelText === "0" || answered) {
         document.getElementById("bottom").textContent = val;
         answered = false;
@@ -80,6 +85,9 @@ function displayFinal () {
     switch(finaloperand) {
         case '+':
             answer = parseFloat(document.getElementById("bottom").textContent) + parseFloat(answer);
+            break;
+        case '-':
+            answer = parseFloat(answer) - parseFloat(document.getElementById("bottom").textContent);
             break;
     }
     document.getElementById("bottom").textContent = answer;
