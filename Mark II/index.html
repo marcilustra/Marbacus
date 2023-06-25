@@ -20,7 +20,7 @@
                     <div class="buttons">
                         <div class="row">
                             <input type='button' id="AC" class="deletes" value="AC" onclick="clearLabelText()">
-                            <input type='button' id="DEL" class="deletes" value="DEL">
+                            <input type='button' id="DEL" class="deletes" value="DEL" onclick="delEat()">
                             <input type='button' id="exp" class="sign" value="^">
                             <input type='button' class="sign" id="divide" value="/">
                         </div>
@@ -44,8 +44,8 @@
                         </div>
                         <div class="row">
                             <input type='button' class="number" id="zero" value="0" onclick="appendNumber(this.value)">
-                            <input type='button' class="number" id="dot" value="." onclick="appendNumber(this.value)">
-                            <input type='button' class="sign" id="sqrt" value="sqrt">
+                            <input type='button' class="number" id="dot" value="." onclick="dotIT(this.value)">
+                            <input type='button' class="sign" id="sqrt" value="&Sqrt;">
                             <input type='button' id="equal-sign" value="=">
                         </div>
                     </div>
