@@ -8,7 +8,7 @@ left = 98
 right = 34
 answer = 132
 */
-var answer = 0;
+var output = 0;
 var left = 0;
 var right = 0;
 var answered = false;
@@ -22,7 +22,7 @@ function clearDisplay() {
 function wipeVars() {
     left = 0;
     right = 0;
-    answer = 0;
+    output = 0;
 }
 function clearAll() {
     clearDisplay();
@@ -47,7 +47,7 @@ function appendNumber (val) {
     var labelText = document.getElementById("bottom").textContent;
     if(answered) {
         wipeVars();
-        console.log(answer);
+        console.log(output);
     }
      //Check if the value is the default zero or if 
      // we are currently displaying answer from displayFinal()
@@ -74,32 +74,34 @@ function myNus (val) {
 }
 
 function plus (val) {
+    var answer;
     left += parseFloat(document.getElementById("bottom").textContent);
     if (left) {
         document.getElementById("bottom").textContent = "0";
     }
-    right = parseFloat(document.getElementById("bottom").textContent.slice(-1));
+    right = parseFloat(document.getElementById("bottom").textContent);
     answer = parseFloat(left) + parseFloat(right);
     document.getElementById("top").textContent = answer + " " + val;
     console.log(answer);
+    output = answer;
 }
 
 function strictEval() {
     let finaloperand = document.getElementById("top").textContent.slice(-1);
     switch(finaloperand) {
         case '+':
-            answer = parseFloat(document.getElementById("bottom").textContent) + parseFloat(answer);
+            output = parseFloat(document.getElementById("bottom").textContent) + parseFloat(output);
             break;
         case '-':
-            answer = parseFloat(answer) - parseFloat(document.getElementById("bottom").textContent);
+            output = parseFloat(output) - parseFloat(document.getElementById("bottom").textContent);
             break;
     }
-    return answer;
+    return output;
 }
 function displayFinal () {
     strictEval();
-    document.getElementById("bottom").textContent = answer;
+    document.getElementById("bottom").textContent = output;
     document.getElementById("top").textContent = "Ans: ";
     answered = true;
-    console.log("Answer: " + answer);
+    console.log("Answer: " + output);
 }
