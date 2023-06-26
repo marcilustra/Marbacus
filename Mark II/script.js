@@ -26,6 +26,7 @@ function wipeVars() {
 }
 function clearAll() {
     clearDisplay();
+    wipeVars();
 }
 
 /*The delEat function wipes both top and bottom displays
@@ -70,28 +71,21 @@ function dotIT (val) {
 }
 
 function myNus (val) {
+
+}
+
+function plus (val) {
     left += parseFloat(document.getElementById("bottom").textContent);
     if (left) {
         document.getElementById("bottom").textContent = "0";
     }
     right = parseFloat(document.getElementById("bottom").textContent.slice(-1));
-    answer = parseFloat(left) - parseFloat(right);
-    document.getElementById("top").textContent = answer + " " + val;
-    console.log("After minus: " + answer);
-}
-
-function plus (val) {
-    left -= parseFloat(document.getElementById("bottom").textContent);
-    if (left) {
-        document.getElementById("bottom").textContent = "0";
-    }
-    right = parseFloat(document.getElementById("bottom").textContent.slice(-1));
-    answer = parseFloat(left) - parseFloat(right);
+    answer = parseFloat(left) + parseFloat(right);
     document.getElementById("top").textContent = answer + " " + val;
     console.log(answer);
 }
 
-function displayFinal () {
+function strictEval() {
     let finaloperand = document.getElementById("top").textContent.slice(-1);
     switch(finaloperand) {
         case '+':
@@ -101,6 +95,9 @@ function displayFinal () {
             answer = parseFloat(answer) - parseFloat(document.getElementById("bottom").textContent);
             break;
     }
+}
+function displayFinal () {
+    strictEval();
     document.getElementById("bottom").textContent = answer;
     document.getElementById("top").textContent = "Ans: ";
     answered = true;
