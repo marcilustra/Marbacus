@@ -50,9 +50,9 @@ function appendNumber (val) {
         console.log(answer);
     }
      //Check if the value is the default zero or if 
-     // we are currently displaying answer 
+     // we are currently displaying answer from displayFinal()
      // to replace it with the value of the input button
-    if(labelText === "0" || answered) {
+    if(labelText.slice(0) === "0" || answered) {
         document.getElementById("bottom").textContent = val;
         answered = false;
     } else {
@@ -71,7 +71,6 @@ function dotIT (val) {
 }
 
 function myNus (val) {
-
 }
 
 function plus (val) {
@@ -95,6 +94,7 @@ function strictEval() {
             answer = parseFloat(answer) - parseFloat(document.getElementById("bottom").textContent);
             break;
     }
+    return answer;
 }
 function displayFinal () {
     strictEval();
