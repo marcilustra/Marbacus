@@ -69,13 +69,24 @@ function dotIT (val) {
     }
 }
 
-function plus(val) {
+function myNus (val) {
     left += parseFloat(document.getElementById("bottom").textContent);
     if (left) {
         document.getElementById("bottom").textContent = "0";
     }
     right = parseFloat(document.getElementById("bottom").textContent.slice(-1));
-    answer = parseFloat(left) + parseFloat(right);
+    answer = parseFloat(left) - parseFloat(right);
+    document.getElementById("top").textContent = answer + " " + val;
+    console.log("After minus: " + answer);
+}
+
+function plus (val) {
+    left -= parseFloat(document.getElementById("bottom").textContent);
+    if (left) {
+        document.getElementById("bottom").textContent = "0";
+    }
+    right = parseFloat(document.getElementById("bottom").textContent.slice(-1));
+    answer = parseFloat(left) - parseFloat(right);
     document.getElementById("top").textContent = answer + " " + val;
     console.log(answer);
 }
@@ -91,7 +102,7 @@ function displayFinal () {
             break;
     }
     document.getElementById("bottom").textContent = answer;
-    document.getElementById("top").textContent = "";
+    document.getElementById("top").textContent = "Ans: ";
     answered = true;
     console.log("Answer: " + answer);
 }
