@@ -91,14 +91,20 @@ html {
     background-color: #98dbdd;
     background-image: linear-gradient(to bottom, #9aacb5, #8495bc);;
 }
-.row .sign:hover{
+.row .sign:hover:enabled{
     background-color: #c5f1f3;
-    background-image: linear-gradient(to bottom, #a9d6e0, #83b2cd);;
+    background-image: linear-gradient(to bottom, #a5dce8, #82bcde);;
 }
 
-.row .sign:active {
+.row .sign:active:enabled {
     background-color: #679bb1;
     background-image: linear-gradient(to bottom, #7b8fa4, #767eb1);;
+}
+
+.row .sign:disabled {
+    background-color: #7d9899;
+    background-image: linear-gradient(to bottom, #738188, #6678a0);;
+    color: #272727;
 }
 .row #equal-sign {
     background-color: #68b868;
