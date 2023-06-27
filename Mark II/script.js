@@ -8,7 +8,7 @@ left = 98
 right = 34
 answer = 132
 */
-var output = 0;
+var output;
 var left = 0;
 var right = 0;
 var answered = false;
@@ -71,21 +71,16 @@ function dotIT (val) {
 }
 
 function myNus (val) {
+
 }
 
 function plus (val) {
-    var answer;
-    left += parseFloat(document.getElementById("bottom").textContent);
-    if (left) {
-        document.getElementById("bottom").textContent = "0";
-    }
-    right = parseFloat(document.getElementById("bottom").textContent);
-    answer = parseFloat(left) + parseFloat(right);
-    document.getElementById("top").textContent = answer + " " + val;
-    console.log(answer);
-    output = answer;
+   
 }
 
+function checkTop() {
+   
+}
 function strictEval() {
     let finaloperand = document.getElementById("top").textContent.slice(-1);
     switch(finaloperand) {
@@ -98,10 +93,13 @@ function strictEval() {
     }
     return output;
 }
-function displayFinal () {
-    strictEval();
+function updateDisplay () {
     document.getElementById("bottom").textContent = output;
     document.getElementById("top").textContent = "Ans: ";
     answered = true;
     console.log("Answer: " + output);
+}
+function displayFinal () {
+    strictEval();
+    updateDisplay();
 }
