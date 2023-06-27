@@ -1,17 +1,13 @@
 /*These are global variables
 answer holds the result of an operation
-left hods the first side value that is input
-right handles the second side of an operation value
-
-e.g 98 + 34 = 132
-left = 98
-right = 34
-answer = 132
+output has now been refactored to do what left once did
+while also holding the value of the previous operation
 */
 var output;
 var left = 0;
-var right = 0;
 var answered = false;
+
+// let topSide = document.getElementById("top").textContent;
 
 //Play audio function
 function clickSound(audioPath) {
@@ -26,7 +22,6 @@ function clearDisplay() {
 
 function wipeVars() {
     left = 0;
-    right = 0;
     output = 0;
 }
 function clearAll() {
@@ -52,6 +47,7 @@ function delEat () {
 function appendNumber (val) {
     clickSound("audio/click.wav");
     var labelText = document.getElementById("bottom").textContent;
+    var topText = document.getElementById("top").textContent;
     if(answered) {
         wipeVars();
         console.log(output);
@@ -59,6 +55,9 @@ function appendNumber (val) {
      //Check if the value is the default zero or if 
      // we are currently displaying answer from displayFinal()
      // to replace it with the value of the input button
+    if(topText === "Ans: "){
+        document.getElementById("top").textContent = "";
+    }
     if(labelText.slice(0) === "0" || answered) {
         document.getElementById("bottom").textContent = val;
         answered = false;
@@ -120,9 +119,10 @@ function strictEval() {
             output = parseFloat(output) ** parseFloat(document.getElementById("bottom").textContent);
             break;
     }
-    clickSound("audio/succ.wav");
     return output;
 }
+//This function changes the contents of the display
+//after strictEval() as the final output.
 function updateDisplay () {
     document.getElementById("bottom").textContent = output;
     document.getElementById("top").textContent = "Ans: ";
@@ -130,6 +130,10 @@ function updateDisplay () {
     console.log("Answer: " + output);
 }
 function displayFinal () {
-    strictEval();
-    updateDisplay();
+    //Only perform display final if the text at the top is filled
+    if(document.getElementById("top").textContent) {
+        clickSound("audio/succ.wav");
+        strictEval();
+        updateDisplay();
+    }
 }

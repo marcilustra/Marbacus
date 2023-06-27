@@ -162,3 +162,129 @@ function updateDisplay() {
     document.getElementById('top').textContent = previousValue;
     document.getElementById('bottom').textContent = currentValue;
   }
+
+var output;
+var left = 0;
+var right = 0;
+var answered = false;
+
+
+function clickSound(audioPath) {
+    var audio = new Audio(audioPath);
+    audio.play();
+}
+
+function clearDisplay() {
+    document.getElementById("top").textContent = "";
+    document.getElementById("bottom").textContent = "0";
+}
+
+function wipeVars() {
+    left = 0;
+    right = 0;
+    output = 0;
+}
+function clearAll() {
+    clickSound("audio/tick.wav");
+    clearDisplay();
+    wipeVars();
+}
+
+function delEat () {
+    var labelText = document.getElementById("bottom").textContent;
+    if(labelText.length == 1) {
+        clearDisplay();
+    } else {
+        document.getElementById("bottom").textContent = labelText.substring(0, labelText.length -1);
+        clickSound("audio/pop.ogg")
+    }
+}
+
+
+function appendNumber (val) {
+    clickSound("audio/click.wav");
+    var labelText = document.getElementById("bottom").textContent;
+    var topText = document.getElementById("top").textContent;
+    if(answered) {
+        wipeVars();
+        console.log(output);
+    }
+     
+    if(topText === "Ans: "){
+        document.getElementById("top").textContent = "";
+    }
+    if(labelText.slice(0) === "0" || answered) {
+        document.getElementById("bottom").textContent = val;
+        answered = false;
+    } else {
+        document.getElementById("bottom").textContent += val;
+    }
+
+}
+
+
+function dotIT (val) {
+    var labelText = document.getElementById("bottom").textContent;
+
+    if(!labelText.includes(".")) {
+        document.getElementById("bottom").textContent += val;
+        clickSound("audio/click.wav");
+    }
+}
+
+function performOperation(val) {
+    clickSound("audio/snap.wav")
+    var labelText = document.getElementById("bottom").textContent;
+    var topLabelText = document.getElementById("top").textContent;
+  
+    if (topLabelText === "") {
+      output = parseFloat(labelText);
+    } else {
+      strictEval();
+    }
+  
+    left = output;
+    document.getElementById("top").textContent = left + " " + val;
+    document.getElementById("bottom").textContent = "0";
+}
+  
+function strictEval() {
+    let finaloperand = document.getElementById("top").textContent.slice(-1);
+    switch(finaloperand) {
+        case '+':
+            output = parseFloat(document.getElementById("bottom").textContent) + parseFloat(output);
+            break;
+        case '-':
+            output = parseFloat(output) - parseFloat(document.getElementById("bottom").textContent);
+            break;
+        case 'X':
+            output = parseFloat(output) * parseFloat(document.getElementById("bottom").textContent);
+            break;
+        case '/':
+            if(parseFloat(document.getElementById("bottom").textContent) == 0) {
+                document.getElementById("bottom").textContent = "Don't do that!";
+                setTimeout(() => {location.reload();}, 5000);
+            } else {
+                output = parseFloat(output) / parseFloat(document.getElementById("bottom").textContent);
+            }
+            break;
+        case '^':
+            output = parseFloat(output) ** parseFloat(document.getElementById("bottom").textContent);
+            break;
+    }
+    return output;
+}
+
+function updateDisplay () {
+    document.getElementById("bottom").textContent = output;
+    document.getElementById("top").textContent = "Ans: ";
+    answered = true;
+    console.log("Answer: " + output);
+}
+function displayFinal () {
+    if(document.getElementById("top").textContent) {
+        clickSound("audio/succ.wav");
+        strictEval();
+        updateDisplay();
+    }
+}
