@@ -1,32 +1,164 @@
- <div class="buttons">
-                    <div class="row1">
-                        <button id="AC">AC</button>
-                        <button id="DEL">DEL</button>
-                        <button id="exp">^</button>
-                        <button class="sign" id="divide">/</button>
-                    </div>
-                    <div class="row2">
-                        <button class="number">9</button>
-                        <button class="number">8</button>
-                        <button class="number">7</button>
-                        <button class="sign" id="times">x</button>
-                    </div>
-                    <div class="row3">
-                        <button class="number">6</button>
-                        <button class="number">5</button>
-                        <button class="number">4</button>
-                        <button class="sign" id="add">+</button>
-                    </div>
-                    <div class="row4">
-                        <button class="number">3</button>
-                        <button class="number">2</button>
-                        <button class="number">1</button>
-                        <button class="sign" id="minus">-</button>
-                    </div>
-                    <div class="row5">
-                        <button class="number" id="zero">0</button>
-                        <button class="sign" id="dot">.</button>
-                        <button class="sign" id="sqrt">sqrt</button>
-                        <button id="equal-sign">-</button>
-                    </div>
-                </div>
+var output;
+var left = 0;
+var right = 0;
+var answered = false;
+
+
+function clearDisplay() {
+    document.getElementById("top").textContent = "";
+    document.getElementById("bottom").textContent = "0";
+}
+
+function wipeVars() {
+    left = 0;
+    right = 0;
+    output = 0;
+}
+function clearAll() {
+    clearDisplay();
+    wipeVars();
+}
+
+
+function delEat () {
+    var labelText = document.getElementById("bottom").textContent;
+
+    if(labelText.length == 1) {
+        clearDisplay();
+    } else {
+        document.getElementById("bottom").textContent = labelText.substring(0, labelText.length -1)
+    }
+}
+
+function appendNumber (val) {
+    var labelText = document.getElementById("bottom").textContent;
+    if(answered) {
+        wipeVars();
+        console.log(output);
+    }
+    if(labelText.slice(0) === "0" || answered) {
+        document.getElementById("bottom").textContent = val;
+        answered = false;
+    } else {
+        document.getElementById("bottom").textContent += val;
+    }
+
+}
+
+function dotIT (val) {
+    var labelText = document.getElementById("bottom").textContent;
+    if(!labelText.includes(".")) {
+        document.getElementById("bottom").textContent += val;
+    }
+}
+
+function myNus (val) {
+
+}
+
+
+function plus (val) {
+    var answer;
+
+    left += parseFloat(document.getElementById("bottom").textContent);
+    if (left) {
+        document.getElementById("bottom").textContent = "0";
+    }
+    right = parseFloat(document.getElementById("bottom").textContent);
+    answer = parseFloat(left) + parseFloat(right);
+    document.getElementById("top").textContent = answer + " " + val;
+    console.log(answer);
+    output = answer;
+}
+
+function checkTop() {
+   
+}
+function strictEval() {
+    let finaloperand = document.getElementById("top").textContent.slice(-1);
+    switch(finaloperand) {
+        case '+':
+            output = parseFloat(document.getElementById("bottom").textContent) + parseFloat(output);
+            break;
+        case '-':
+            output = parseFloat(output) - parseFloat(document.getElementById("bottom").textContent);
+            break;
+    }
+    return output;
+}
+function updateDisplay () {
+    document.getElementById("bottom").textContent = output;
+    document.getElementById("top").textContent = "Ans: ";
+    answered = true;
+    console.log("Answer: " + output);
+}
+function displayFinal () {
+    strictEval();
+    updateDisplay();
+}
+
+
+
+
+
+function myNus(val) {
+    var answer;
+
+    if(document.getElementById("bottom").textContent && !left) {
+        left = parseFloat(getElementById("bottom").textContent);
+    }else {
+        left -= parseFloat(document.getElementById("bottom").textContent);
+    }
+    if (left) {
+      document.getElementById("bottom").textContent = "0";
+    }
+    right = parseFloat(document.getElementById("bottom").textContent);
+    answer = parseFloat(left) - parseFloat(right);
+    document.getElementById("top").textContent = answer + " " + val;
+    console.log(answer);
+    output = answer;
+  }
+
+let currentValue = '';
+let previousValue = '';
+let selectedOperator = '';
+
+function handleNumberClick(number) {
+    currentValue += number;
+    updateDisplay();
+}
+
+function handleOperatorClick(operator) {
+    if(currentValue !== '') {
+        previousValue = currentValue;
+        selectedOperator = operator;
+        currentValue = '';
+        updateDisplay();
+    }
+}
+
+function calculate() {
+    let result = '';
+    const previousNum = parseFloat(previousValue)
+    const currentNum = parseFloat(currentValue);
+
+    if(selectedOperator === '+') {
+        result = previousNum + currentNum;
+    } else if(selectedOperator === '-') {
+        result = previousNum - currentNum;
+    } else if(selectedOperator === 'X') {
+        result = previousNum * currentNum;
+    } else if(selectedOperator === '/') {
+        result = previousNum / currentNum;
+    }
+
+    previousValue = result.toString();
+    currentValue = '';
+
+    updateDisplay();
+}
+
+function updateDisplay() {
+    document.getElementById('top').textContent = previousValue;
+    document.getElementById('bottom').textContent = currentValue;
+  }

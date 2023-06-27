@@ -21,31 +21,31 @@
                         <div class="row">
                             <input type='button' id="AC" class="deletes" value="AC" onclick="clearAll()">
                             <input type='button' id="DEL" class="deletes" value="DEL" onclick="delEat()">
-                            <input type='button' id="exp" class="sign" value="^">
-                            <input type='button' class="sign" id="divide" value="/">
+                            <input type='button' id="exp" class="sign" value="^" onclick="performOperation(this.value)">
+                            <input type='button' class="sign" id="divide" value="/" onclick="performOperation(this.value)">
                         </div>
                         <div class="row">
                             <input type='button' class="number" value="9" onclick="appendNumber(this.value)">
                             <input type='button' class="number" value="8" onclick="appendNumber(this.value)">
                             <input type='button' class="number" value="7" onclick="appendNumber(this.value)">
-                            <input type='button' class="sign" id="times" value="X">
+                            <input type='button' class="sign" id="times" value="X" onclick="performOperation(this.value)">
                         </div>
                         <div class="row">
                             <input type='button' class="number" value="6" onclick="appendNumber(this.value)">
                             <input type='button' class="number" value="5" onclick="appendNumber(this.value)">
                             <input type='button' class="number" value="4" onclick="appendNumber(this.value)">
-                            <input type='button' class="sign" id="add" value="+" onclick="plus(this.value)">
+                            <input type='button' class="sign" id="add" value="+" onclick="performOperation(this.value)">
                         </div>
                         <div class="row">
                             <input type='button' class="number" value="3" onclick="appendNumber(this.value)">
                             <input type='button' class="number" value="2" onclick="appendNumber(this.value)">
                             <input type='button' class="number" value="1" onclick="appendNumber(this.value)">
-                            <input type='button' class="sign" id="minus" value="-" onclick="myNus(this.value)">
+                            <input type='button' class="sign" id="minus" value="-" onclick="performOperation(this.value)">
                         </div>
                         <div class="row">
                             <input type='button' class="number" id="zero" value="0" onclick="appendNumber(this.value)">
                             <input type='button' class="number" id="dot" value="." onclick="dotIT(this.value)">
-                            <input type='button' class="sign" id="sqrt" value="&Sqrt;">
+                            <input type='button' class="sign" id="sqrt" value="&Sqrt;" disabled>
                             <input type='button' id="equal-sign" value="=" onclick="displayFinal()">
                         </div>
                     </div>
