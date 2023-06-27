@@ -13,6 +13,11 @@ var left = 0;
 var right = 0;
 var answered = false;
 
+//Play audio function
+function clickSound(audioPath) {
+    var audio = new Audio(audioPath);
+    audio.play();
+}
 //Clears the display and the three variables as well.
 function clearDisplay() {
     document.getElementById("top").textContent = "";
@@ -25,6 +30,7 @@ function wipeVars() {
     output = 0;
 }
 function clearAll() {
+    clickSound("audio/tick.wav");
     clearDisplay();
     wipeVars();
 }
@@ -34,16 +40,17 @@ Bottom is cleaned one by one till the last
 Top if the final character of bottom has been deleted down to 0*/
 function delEat () {
     var labelText = document.getElementById("bottom").textContent;
-
     if(labelText.length == 1) {
         clearDisplay();
     } else {
-        document.getElementById("bottom").textContent = labelText.substring(0, labelText.length -1)
+        document.getElementById("bottom").textContent = labelText.substring(0, labelText.length -1);
+        clickSound("audio/pop.ogg")
     }
 }
 
 //Adds the number value of the button to the bottom display string
 function appendNumber (val) {
+    clickSound("audio/click.wav");
     var labelText = document.getElementById("bottom").textContent;
     if(answered) {
         wipeVars();
@@ -64,23 +71,31 @@ function appendNumber (val) {
 //Places a single decimal point on a number.
 function dotIT (val) {
     var labelText = document.getElementById("bottom").textContent;
-//Check if string already includes a dot character
+    //Check if string already includes a dot character
     if(!labelText.includes(".")) {
         document.getElementById("bottom").textContent += val;
+        clickSound("audio/click.wav");
     }
 }
 
-function myNus (val) {
-
+/*In conjuction with StrictEval(), this function checks
+the previous operator and if there is text on the top label first*/
+function performOperation(val) {
+    clickSound("audio/snap.wav")
+    var labelText = document.getElementById("bottom").textContent;
+    var topLabelText = document.getElementById("top").textContent;
+  
+    if (topLabelText === "") {
+      output = parseFloat(labelText);
+    } else {
+      strictEval();
+    }
+  
+    left = output;
+    document.getElementById("top").textContent = left + " " + val;
+    document.getElementById("bottom").textContent = "0";
 }
-
-function plus (val) {
-   
-}
-
-function checkTop() {
-   
-}
+  
 function strictEval() {
     let finaloperand = document.getElementById("top").textContent.slice(-1);
     switch(finaloperand) {
@@ -90,7 +105,22 @@ function strictEval() {
         case '-':
             output = parseFloat(output) - parseFloat(document.getElementById("bottom").textContent);
             break;
+        case 'X':
+            output = parseFloat(output) * parseFloat(document.getElementById("bottom").textContent);
+            break;
+        case '/':
+            if(parseFloat(document.getElementById("bottom").textContent) == 0) {
+                document.getElementById("bottom").textContent = "Don't do that!";
+                setTimeout(() => {location.reload();}, 5000);
+            } else {
+                output = parseFloat(output) / parseFloat(document.getElementById("bottom").textContent);
+            }
+            break;
+        case '^':
+            output = parseFloat(output) ** parseFloat(document.getElementById("bottom").textContent);
+            break;
     }
+    clickSound("audio/succ.wav");
     return output;
 }
 function updateDisplay () {
