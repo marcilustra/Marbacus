@@ -90,7 +90,7 @@ function performOperation(val) {
       strictEval();
     }
   
-    left = output;
+    left = output.toFixed(4);
     document.getElementById("top").textContent = left + " " + val;
     document.getElementById("bottom").textContent = "0";
 }
@@ -112,7 +112,7 @@ function strictEval() {
                 document.getElementById("bottom").textContent = "Don't do that!";
                 setTimeout(() => {location.reload();}, 5000);
             } else {
-                output = parseFloat(output) / parseFloat(document.getElementById("bottom").textContent);
+                output = (parseFloat(output) / parseFloat(document.getElementById("bottom").textContent));
             }
             break;
         case '^':
@@ -124,7 +124,7 @@ function strictEval() {
 //This function changes the contents of the display
 //after strictEval() as the final output.
 function updateDisplay () {
-    document.getElementById("bottom").textContent = output;
+    document.getElementById("bottom").textContent = output.toFixed(3);
     document.getElementById("top").textContent = "Ans: ";
     answered = true;
     console.log("Answer: " + output);
