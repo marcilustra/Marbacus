@@ -90,9 +90,10 @@ function performOperation(val) {
       strictEval();
     }
   
-    left = output.toFixed(4);
+    left = output;
     document.getElementById("top").textContent = left + " " + val;
     document.getElementById("bottom").textContent = "0";
+    
 }
   
 function strictEval() {
@@ -109,8 +110,8 @@ function strictEval() {
             break;
         case '/':
             if(parseFloat(document.getElementById("bottom").textContent) == 0) {
-                document.getElementById("bottom").textContent = "Don't do that!";
-                setTimeout(() => {location.reload();}, 5000);
+               
+                document.getElementById("bottom").textContent
             } else {
                 output = (parseFloat(output) / parseFloat(document.getElementById("bottom").textContent));
             }
