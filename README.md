@@ -5,6 +5,7 @@ The name is a play on Marc and Abacus. (poorly done).
 # Navigation
 [Mark 1](#mark-1)
 
+# HTML Version
 ## Mark II
 First major change from Mark I is the theme. 
 Mark II uses a light blue theme with a glowing cyan display that has two levels.
@@ -39,3 +40,8 @@ Operations availbale:
     2. Subtract
     3. Multiply
     4. Divide
+# VB Version
+## Mark I(VB)
+
+Borrows directly from Mark II of the HTMl version and is functionally identical to it with one exception. 
+Divide by zero is caught by a check and terminates the program after giving the user a message to discourage them from doing it again.
