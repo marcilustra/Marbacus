@@ -3,7 +3,12 @@ A simple HTML CSS and JS Calculator.
 The name is a play on Marc and Abacus. (poorly done).
 
 # Navigation
-[Mark 1](#mark-1)
+1. [HTML VERSION](#html-version)
+    a. [Mark 1](#mark-1)
+    b. [Mark II](#mark-ii)
+2. [VB Version](#vb-version)
+    a. [Mark 1](#mark-ivb)
+
 
 # HTML Version
 ## Mark II
@@ -40,6 +45,7 @@ Operations availbale:
     2. Subtract
     3. Multiply
     4. Divide
+
 # VB Version
 ## Mark I(VB)
 
