@@ -1,5 +1,6 @@
 # Marbacus
-A simple HTML CSS and JS Calculator.
+A simple HTML CSS and JS Calculator. \
+It is slowly becoming a game to see how many languages I can make it in. \
 The name is a play on Marc and Abacus. (poorly done).
 
 # Navigation
