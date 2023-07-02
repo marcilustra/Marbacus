@@ -50,4 +50,8 @@ Operations availbale:
 ## Mark I(VB)
 
 Borrows directly from Mark II of the HTMl version and is functionally identical to it with one exception. 
+![image](https://github.com/marcilustra/Marbacus/assets/111253348/ff708bed-bd1b-435c-a2da-8b7cbeed28bb)
 Divide by zero is caught by a check and terminates the program after giving the user a message to discourage them from doing it again.
+![image](https://github.com/marcilustra/Marbacus/assets/111253348/16cff665-841a-4ad0-82a8-c978d9bfeac0)
+
+
