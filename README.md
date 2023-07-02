@@ -30,7 +30,7 @@ Append numbers to the bottom text I/O
 ![image](https://github.com/marcilustra/Marbacus/assets/111253348/299b3ce2-cba5-4dcd-a4a3-4d3c5495777a)
 
 #### The Operators
-1. Add\n
+1. Add \
    ![image](https://github.com/marcilustra/Marbacus/assets/111253348/0313cc5d-f7d2-470f-8dde-2c1996c28fa2)
 
 3. Subtract
