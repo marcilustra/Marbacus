@@ -32,6 +32,7 @@ Before an operation is carried out the calculaot check first if there is a previ
 
 ## Mark 1
 Uses eval() (semi-safely since all input is restricted to only numbers and operator strings but not entirely: you can Ctrl + V invalid inputs)
+![image](https://github.com/marcilustra/Marbacus/assets/111253348/96f3a396-dbea-417e-a43a-4783033bd15b)
 
 Operations availbale:
     1. Add
