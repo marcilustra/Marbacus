@@ -4,11 +4,11 @@ It is slowly becoming a game to see how many languages I can make it in. \
 The name is a play on Marc and Abacus. (poorly done).
 
 # Navigation
-1. [HTML VERSION](#html-version)
-    a. [Mark 1](#mark-1)
-    b. [Mark II](#mark-ii)
-2. [VB Version](#vb-version)
-    a. [Mark 1](#mark-ivb)
+1. [HTML VERSION](#html-version) \
+|    a. [Mark 1](#mark-1) \
+|    b. [Mark II](#mark-ii) \
+2. [VB Version](#vb-version) \
+|    a. [Mark 1](#mark-ivb)
 
 
 # HTML Version
