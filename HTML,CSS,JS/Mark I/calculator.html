@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marbacus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form class="calc-body">
+            <div class="display">
+                <input type="text" autocomplete="off" pattern="[0-9./+=-*]{1,10}" maxlength="10" id="display" class="display" contenteditable="false">
+            </div>
+            <div class="inputs">
+                <input type="button" value="AC" id="clear" onclick="clearField()" class="delete">
+                <input type="button" value="DEL" class="delete" onclick="del()">
+                <input type="button" value="." id="dot" disabled class="sign operator" onclick="signIt(this.value)" >
+                <input type="button" value="/" id="divide" disabled class="sign operator" onclick="signIt(this.value)">
+            </div>
+            <div class="inputs">
+                <input type="button" value="9" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="8" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="7" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="*" id="times" disabled class="sign operator" onclick="signIt(this.value)">
+            </div>
+            <div class="inputs">
+                <input type="button" value="6" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="5" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="4" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="-" id="minus" disabled class="sign operator" onclick="signIt(this.value)">
+            </div>
+            <div class="inputs">
+                <input type="button" value="3" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="2" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="1" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="+" id="add" class="sign operator" disabled onclick="signIt(this.value)">
+            </div>
+            <div class="inputs" id="bottom">
+                <input type="button" value="00" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="0" class="number" onclick="appendVal(this.value)">
+                <input type="button" value="=" id="button" class="equal-sign sign" onclick="compute()" disabled>         
+            </div>
+        </form>
+    </div>
+    <footer>
+        <script src="logic.js"></script>
+    </footer>
+</body>
+</html>
