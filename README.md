@@ -33,20 +33,20 @@ Append numbers to the bottom text I/O
 1. Add \
    ![image](https://github.com/marcilustra/Marbacus/assets/111253348/0313cc5d-f7d2-470f-8dde-2c1996c28fa2)
 
-3. Subtract
+3. Subtract \
    ![image](https://github.com/marcilustra/Marbacus/assets/111253348/57fc57b4-562c-4fd3-a4d4-8e0686ae8c80)
 
-5. Multiply
+5. Multiply \
    ![image](https://github.com/marcilustra/Marbacus/assets/111253348/1b5cfc69-0f11-443a-8c6e-ccb8b25772ad)
 
-7. Divide
+7. Divide \
    ![image](https://github.com/marcilustra/Marbacus/assets/111253348/e65b0b3e-92fa-4c72-9ca5-8537f2a62186)
 
-9. Exponentiate
+9. Exponentiate \
     ![image](https://github.com/marcilustra/Marbacus/assets/111253348/15a5699e-6c8a-450c-9baf-1cf48a801cfb)
 
-11. Square root(disabled
-    ![image](https://github.com/marcilustra/Marbacus/assets/111253348/6a82f2c7-1a0d-49a8-8d38-00ec8f1a6488)
+11. Square root(disabled) \
+    ![image](https://github.com/marcilustra/Marbacus/assets/111253348/6a82f2c7-1a0d-49a8-8d38-00ec8f1a6488) \
 
 Before an operation is carried out the calculaot check first if there is a previous one being undertaken and calls for evaluation before the operand is appended to the top label output.
 
