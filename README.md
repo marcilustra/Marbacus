@@ -12,6 +12,9 @@ The name is a play on Marc and Abacus. (poorly done).
 
 
 # HTML Version
+## Mark III
+This time we propose a calculator that can perform calculations on Binary numbers and perhaps, more.
+Allowing for different themes depending on the user's choice.
 ## Mark II
 First major change from Mark I is the theme. 
 Mark II uses a light blue theme with a glowing cyan display that has two levels.
