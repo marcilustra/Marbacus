@@ -80,6 +80,8 @@ function dotIT (val) {
 /*In conjuction with StrictEval(), this function checks
 the previous operator and if there is text on the top label first*/
 function performOperation(val) {
+    //First we should check if a number if zero
+    //This way we can work with negative numbers b
     clickSound("audio/snap.wav")
     var labelText = document.getElementById("bottom").textContent;
     var topLabelText = document.getElementById("top").textContent;
