@@ -62,6 +62,8 @@ header {
     height: 60px;
     text-align: right;
     color: white;
+    font-size: 40px;
+    margin-right: 5px;
 }
 .buttons {
     display: grid;
