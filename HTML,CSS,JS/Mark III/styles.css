@@ -28,7 +28,7 @@
     --image1: url(images/pramod-tiwari--Q8SZ4KIug4-unsplash.jpg);
     /*BnW image*/
     --image2: url(images/dan-cristian-padure-zm1oNbYS7DY-unsplash.jpg);
-    
+
     --image3: url(images/s-tsuchiya-3e0yw5MssSU-unsplash.jpg);
     --image4: url(images/shri-FTDCDqOxTEE-unsplash.jpg);
 }
@@ -37,9 +37,6 @@ html, body {
     height: 100%;
 }
 
-body.loaded {
-    opacity: 1;
-}
 
 body{
     /*Flex properties*/
@@ -52,8 +49,6 @@ body{
     background-image: var(--image1);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.2;
-    transition: opacity 1.5s ease-in-out;
 
     /*Size properties*/
     width: 100vw;
@@ -79,13 +74,11 @@ body{
 .main-body {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     background-color: var(--panelColor1);
     background-image: var(--gradient1);
     backdrop-filter: blur(25px);
     border-radius: 10px;
-    /* box-shadow: 0 0 10px 0 var(--glowcolor4); */
     width: 480px;
     height:810px;
 }
@@ -153,7 +146,6 @@ input {
     border-radius: 10px;
     border: none;
     background-color: var(--panelColor2point5);
-    /* box-shadow: 0 0 1px 0 var(--glowColor2); */
     color: var(--fontColor1);
     font-size: 1.5rem;
 }
