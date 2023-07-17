@@ -4,10 +4,17 @@
     
     --panelColor1: #3498c626;
     --panelColor2: #0c0e1874;
+    --panelColor2point5: #38468f0e;
+    --panelColor3: #1e2445ca;
+    --panelColor4: #1312174d;
 
     --fontColor1: rgba(93, 211, 234, 0.961);
     --fontColor1point5: rgba(72, 195, 187, 0.726);
+    --fontColor2: rgba(141, 254, 237, 0.961);
+    --fontColordisabled: rgba(33, 84, 76, 0.961);
     --glowColor1: rgba(61, 210, 230, 0.733);
+    --glowColor2: rgba(162, 255, 210, 0.733);
+    --glowColor3: rgb(162, 255, 210);
 }
 html, body {
     width: 100%;
@@ -48,6 +55,9 @@ body{
 
 .main-body {
     display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     background-color: var(--panelColor1);
     backdrop-filter: blur(5px);
     border-radius: 10px;
@@ -60,7 +70,7 @@ body{
 a top and a bottom level*/
 .display {
     width: 450px;
-    height: 180px;
+    height: 160px;
     background-color: var(--panelColor2);
     margin: 15px auto;
     border-radius: 15px;
@@ -91,4 +101,43 @@ a top and a bottom level*/
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4.5rem;
     text-align: right;
+}
+.bottomContent {
+    margin-right: 10px;
+}
+
+.buttons-panel {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--panelColor2);
+    padding: 10px 10px 15px 10px;
+    border-radius: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+}
+
+input {
+    width: 81px;
+    height: 88px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--panelColor2point5);
+    /* box-shadow: 0 0 1px 0 var(--glowColor2); */
+    color: var(--fontColor1);
+    font-size: 1.5rem;
+}
+input:not(:enabled) {
+    background-color: var(--panelColor4);
+    color: var(--fontColordisabled);
+}
+input:hover:enabled {
+    box-shadow: 0 0 10px 0 var(--glowColor3);
+    color: var(--fontColor2);
 }
