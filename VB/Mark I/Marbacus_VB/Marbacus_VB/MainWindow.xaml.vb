@@ -69,17 +69,17 @@ Class MainWindow
         lblTopText.Content = output & " " & val
         lblBottomText.Content = "0"
     End Sub
+    
     Private Sub checkIfZero()
-        Dim bottomText As String = lblBottomText.Content
-        If Double.Parse(bottomText) = 0 Then
+        Try
+            Dim divisor As Double = Double.Parse(lblBottomText.Content)
+            output = Double.Parse(output) / divisor
+        Catch ex As DivideByZeroException
             dividedByZero = True
             MsgBox("Don't do that again!", vbOKOnly)
             clearAll()
             Close()
-        Else
-            dividedByZero = False
-            Return
-        End If
+        End Try
     End Sub
     Private Sub strictEval()
         Dim topString As String = lblTopText.Content
