@@ -1,7 +1,11 @@
 :root {
     --1stbackgroundColor: #1a1527;
-    --panelColor1: #1d2b43e7;
     --3rdbackgroundColor: #1f4d69;
+    
+    --panelColor1: #1d2b43e7;
+    --panelColor2: #0c0e18b5;
+
+    --glowColor1: rgba(61, 210, 230, 0.733);
 }
 html, body {
     width: 100%;
@@ -41,9 +45,21 @@ body{
 }
 
 .main-body {
+    display: flex;
     background-color: var(--panelColor1);
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     width: 480px;
     height:810px;
+}
+
+/*The display panel will have two levels
+a top and a bottom level*/
+.display {
+    width: 450px;
+    height: 180px;
+    background-color: var(--panelColor2);
+    margin: 15px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 0 var(--glowColor1);
 }
