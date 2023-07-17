@@ -1,5 +1,8 @@
 :root {
+
+    /*BLUES*/
     --1stbackgroundColor: #1a1527;
+    --2ndbackgroundColor: #0c0e18;
     --3rdbackgroundColor: #1f4d69;
     
     --panelColor1: #3498c626;
@@ -8,16 +11,24 @@
     --panelColor3: #1d2032b8;
     --panelColor4: #1312174d;
 
+    --gradient1: linear-gradient(to bottom, var(--panelColor1), var(--panelColor2));
+    --gradient2: linear-gradient(to bottom, var(--fontColor1), var(--fontColor2));
+
     --fontColor1: rgba(93, 211, 234, 0.961);
     --fontColor1point5: rgba(72, 195, 187, 0.726);
     --fontColor2: rgba(141, 254, 237, 0.961);
     --fontColordisabled: rgba(33, 84, 76, 0.961);
+
     --glowColor1: rgba(61, 210, 230, 0.733);
     --glowColor2: rgba(162, 255, 210, 0.733);
     --glowColor3: rgb(162, 255, 210);
+    --glowcolor4: #74cded;
 
+    /*Blue image*/
     --image1: url(images/pramod-tiwari--Q8SZ4KIug4-unsplash.jpg);
+    /*BnW image*/
     --image2: url(images/dan-cristian-padure-zm1oNbYS7DY-unsplash.jpg);
+    
     --image3: url(images/s-tsuchiya-3e0yw5MssSU-unsplash.jpg);
     --image4: url(images/shri-FTDCDqOxTEE-unsplash.jpg);
 }
@@ -25,6 +36,11 @@ html, body {
     width: 100%;
     height: 100%;
 }
+
+body.loaded {
+    opacity: 1;
+}
+
 body{
     /*Flex properties*/
     display: flex;
@@ -36,6 +52,8 @@ body{
     background-image: var(--image1);
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.2;
+    transition: opacity 1.5s ease-in-out;
 
     /*Size properties*/
     width: 100vw;
@@ -64,9 +82,10 @@ body{
     /* justify-content: center; */
     align-items: center;
     background-color: var(--panelColor1);
-    backdrop-filter: blur(5px);
+    background-image: var(--gradient1);
+    backdrop-filter: blur(25px);
     border-radius: 10px;
-    box-shadow: 0 0 20px 0 rgba(16, 18, 20, 0.5);
+    /* box-shadow: 0 0 10px 0 var(--glowcolor4); */
     width: 480px;
     height:810px;
 }
