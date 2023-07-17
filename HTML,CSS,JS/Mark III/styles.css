@@ -2,9 +2,11 @@
     --1stbackgroundColor: #1a1527;
     --3rdbackgroundColor: #1f4d69;
     
-    --panelColor1: #1d2b43e7;
-    --panelColor2: #0c0e18b5;
+    --panelColor1: #3498c626;
+    --panelColor2: #0c0e1874;
 
+    --fontColor1: rgba(93, 211, 234, 0.961);
+    --fontColor1point5: rgba(72, 195, 187, 0.726);
     --glowColor1: rgba(61, 210, 230, 0.733);
 }
 html, body {
@@ -47,8 +49,9 @@ body{
 .main-body {
     display: flex;
     background-color: var(--panelColor1);
+    backdrop-filter: blur(5px);
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 0 rgba(16, 18, 20, 0.5);
     width: 480px;
     height:810px;
 }
@@ -62,4 +65,30 @@ a top and a bottom level*/
     margin: 15px auto;
     border-radius: 15px;
     box-shadow: 0 0 15px 0 var(--glowColor1);
+}
+
+.topDisplay{
+    /*position and size properties*/
+    width: 95%;
+    height: 30%;
+    margin: 10px auto;
+
+    /*font properties*/
+    color: var(--fontColor1point5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.bottomDisplay{
+    /*position and size properties*/
+    width: 99%;
+    height: 50%;
+    margin: 10px auto;
+
+    /*font properties*/
+    color: var(--fontColor1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4.5rem;
+    text-align: right;
 }
