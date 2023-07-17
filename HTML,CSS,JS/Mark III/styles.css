@@ -1,23 +1,33 @@
 :root {
     --1stbackgroundColor: #1a1527;
-    --2ndbackgroundColor: #1d2b43e7;
+    --panelColor1: #1d2b43e7;
     --3rdbackgroundColor: #1f4d69;
 }
 html, body {
     width: 100%;
     height: 100%;
 }
-html{
+body{
+    /*Flex properties*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Background properties*/
     background-color: var(--1stbackgroundColor);
     background-image: url(images/pramod-tiwari--Q8SZ4KIug4-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    /*Size properties*/
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+
+    /*Animation properties*/
     opacity: 0;
     animation-name: fade-in;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -30,16 +40,10 @@ html{
     }
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .main-body {
-    background-color: var(--2ndbackgroundColor);
+    background-color: var(--panelColor1);
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     width: 480px;
-    height:720px;
+    height:810px;
 }
