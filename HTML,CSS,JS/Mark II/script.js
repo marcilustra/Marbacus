@@ -61,7 +61,7 @@ function appendNumber (val) {
     if(labelText.slice(0) === "0" || answered) {
         document.getElementById("bottom").textContent = val;
         answered = false;
-    } else if (labelText === "-"){
+    } else if (labelText.includes("-")){
         document.getElementById("bottom").textContent += val;
     } else {
         document.getElementById("bottom").textContent += val;
