@@ -15,6 +15,9 @@ The name is a play on Marc and Abacus. (poorly done).
 ## Mark III
 This time we propose a calculator that can perform calculations on Binary numbers and perhaps, more.
 Allowing for different themes depending on the user's choice.
+![image](https://github.com/marcilustra/Marbacus/assets/111253348/1ccd95fb-b352-40a6-bfb3-3bd35b0760c1)
+Background Photo by <a href="https://unsplash.com/es/@pramodtiwari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pramod Tiwari</a> on <a href="https://unsplash.com/t/3d-renders?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 ## Mark II
 First major change from Mark I is the theme. 
 Mark II uses a light blue theme with a glowing cyan display that has two levels.
