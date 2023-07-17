@@ -162,3 +162,10 @@ input:active:enabled {
     box-shadow: 0 0 10px 0 var(--glowColor3);
     color: var(--fontColor2);
 }
+
+.number {
+    background-color: var(--panelColor3);
+}
+.number:hover {
+    background-color: var(--panelColor2point5);
+}
