@@ -97,6 +97,8 @@ function performOperation(val) {
     document.getElementById("bottom").textContent = "0";
     
 }
+
+
   
 function strictEval() {
     let finaloperand = document.getElementById("top").textContent.slice(-1);
