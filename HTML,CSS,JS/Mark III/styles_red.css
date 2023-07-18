@@ -129,6 +129,7 @@ a top and a bottom level*/
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     text-align: right;
+    overflow: hidden;
 }
 
 .bottomDisplay{
@@ -140,8 +141,9 @@ a top and a bottom level*/
     /*font properties*/
     color: var(--fontColor1);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 4.5rem;
+    font-size: 2.75rem;
     text-align: right;
+    overflow: hidden;
 }
 #bottomContent {
     margin-right: 10px;

@@ -1,3 +1,15 @@
+//Append numered buttons to bottom content
+function appendNumber(number) {
+    var bottomContent = document.getElementById("bottomContent").innerHTML;
+    
+    if (bottomContent == "0") {
+        document.getElementById("bottomContent").innerHTML = number;
+    } else if(bottomContent.length < 15){
+        document.getElementById("bottomContent").innerHTML += number;
+    }
+}
+
+//CLEAR FUNCTIONS
 //Clear all does as it says, it clears all the content in the top and bottom
 //in one click
 function clearAll() {
@@ -22,6 +34,8 @@ function deleteCut() {
 function clearBottom() {
     document.getElementById("bottomContent").innerHTML = "0";
 }
+//CLEAR FUNCTIONS END
+
 
 //Change themes
 function changeThemeLava() {
