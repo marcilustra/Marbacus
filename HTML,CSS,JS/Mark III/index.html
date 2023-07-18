@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marbacus III</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="styles_header" rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <header>
@@ -20,15 +20,15 @@
     <div class="main-body">
         <div class="display">
             <div class="topDisplay">
-                <label class="topContent"></label>
+                <label id="topContent">12 * 45</label>
             </div>
             <div class="bottomDisplay">
-                <label class="bottomContent" id="bottomContent">5660</label>
+                <label id="bottomContent">5660</label>
             </div>
         </div>
         <div class="buttons-panel">
   <div class="row" id="row-1">
-    <input type="button" value="AC" class="deletor" onclick="">
+    <input type="button" value="AC" class="deletor" onclick="clearAll()">
     <input type="button" value="DEL" class="deletor" onclick="deleteCut()">
     <input type="button" value="CE" class="deletor" onclick="clearBottom()">
     <input type="button" value="(" class="operator">

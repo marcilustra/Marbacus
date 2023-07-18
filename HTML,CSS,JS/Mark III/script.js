@@ -1,3 +1,11 @@
+//Clear all does as it says, it clears all the content in the top and bottom
+//in one click
+function clearAll() {
+    document.getElementById("topContent").innerHTML = "";
+    document.getElementById("bottomContent").innerHTML = "0";
+
+}
+
 //deleteCut removes the last item in the bottom content
 //one by one until it is down to zero.
 function deleteCut() {

@@ -142,7 +142,7 @@ a top and a bottom level*/
     font-size: 4.5rem;
     text-align: right;
 }
-.bottomContent {
+#bottomContent {
     margin-right: 10px;
 }
 
