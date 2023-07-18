@@ -50,12 +50,17 @@ function clearBottom() {
 
 
 //Change themes
-function changeThemeLava() {
-    document.getElementById("styles_header").setAttribute("href", "styles_red.css");
+function changeTheme(filename) {
+    var cssLink = document.getElementById("styles_header");
+    cssLink.href = filename;
+
+    localStorage.setItem("selectedCSS", filename);
 }
-function changeThemeMidnight() {
-    document.getElementById("styles_header").setAttribute("href", "styles_blue.css");
-}
-function changeThemeSnow() {
-    document.getElementById("styles_header").setAttribute("href", "styles_snow.css");
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+    var selectedCSS = localStorage.getItem("selectedCSS");
+    if (selectedCSS) {
+        var cssLink = document.getElementById("styles_header");
+        cssLink.href = selectedCSS;
+    }
+});

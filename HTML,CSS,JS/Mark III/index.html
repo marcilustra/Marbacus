@@ -10,9 +10,16 @@
 <header>
     <nav id="nav-bar">
         <ul class="navbar">
-            <li class="theme-select" onclick="changeThemeMidnight()"><a href="#">Midnight</a></li>
-            <li class="theme-select" onclick="changeThemeLava()"><a href="#">Lava</a></li>
-            <li class="theme-select" onclick="changeThemeSnow()"><a href="#">Snow</a></li>
+          <div class="dropdown">
+            <button class="dropbtn">Themes</button>
+            <div class="dropdown-content">
+              <ul class="themes-list">
+                <li class="theme-select" onclick="changeTheme('styles_blue.css')"><a href="#">Midnight</a></li>
+                <li class="theme-select" onclick="changeTheme('styles_red.css')"><a href="#">Lava</a></li>
+                <li class="theme-select" onclick="changeTheme('styles_snow.css')"><a href="#">Snow</a></li>
+              </ul>
+            </div>
+          </div>
         </ul>
     </nav>
 </header>
