@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marbacus III</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <header>
     <nav id="nav-bar">
         <ul class="navbar">
-            <li class="theme-select" h>Midnight</li>
+            <li class="theme-select">Midnight</li>
             <li class="theme-select">Lava</li>
             <li class="theme-select">Snow</li>
         </ul>
@@ -22,14 +23,14 @@
                 <label class="topContent"></label>
             </div>
             <div class="bottomDisplay">
-                <label class="bottomContent">0</label>
+                <label class="bottomContent" id="bottomContent">5660</label>
             </div>
         </div>
         <div class="buttons-panel">
   <div class="row" id="row-1">
-    <input type="button" value="AC" class="deletor">
+    <input type="button" value="AC" class="deletor" onclick="">
     <input type="button" value="DEL" class="deletor">
-    <input type="button" value="CE" class="deletor">
+    <input type="button" value="CE" class="deletor" onclick="clearBottom()">
     <input type="button" value="(" class="operator">
     <input type="button" value=")" class="operator">
   </div>
@@ -73,6 +74,6 @@
 </body>
 <br>
 <footer class="bottomGear">
-    <script src="script.js"></script>
+    
 </footer>
 </html>
