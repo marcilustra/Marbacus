@@ -1,13 +1,25 @@
 //Append numered buttons to bottom content
 function appendNumber(number) {
-    var bottomContent = document.getElementById("bottomContent").innerHTML;
-    
-    if (bottomContent == "0") {
-        document.getElementById("bottomContent").innerHTML = number;
-    } else if(bottomContent.length < 15){
-        document.getElementById("bottomContent").innerHTML += number;
+    var bottomContent = document.getElementById("bottomContent");
+    var currentNumber = bottomContent.textContent;
+  
+    if (currentNumber === "0") {
+      bottomContent.textContent = number;
+    } else if (currentNumber.length < 19) {
+      bottomContent.textContent += number;
     }
-}
+  
+    // Format the number if it exceeds 999 digits
+    var formattedNumber = formatNumberWithCommas(bottomContent.textContent);
+    bottomContent.textContent = formattedNumber;
+  }
+  
+  // Function to format the number with commas
+  function formatNumberWithCommas(number) {
+    var numericValue = parseInt(number.replace(/,/g, ""));
+    return numericValue.toLocaleString();
+  }
+  
 
 //CLEAR FUNCTIONS
 //Clear all does as it says, it clears all the content in the top and bottom

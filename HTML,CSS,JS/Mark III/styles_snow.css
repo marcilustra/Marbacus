@@ -1,28 +1,28 @@
 :root {
 
     /*BLUES*/
-    --1stbackgroundColor: #3b3c3d;
-    --2ndbackgroundColor: #222122;
-    --3rdbackgroundColor: #5b656d;
+    --snow1stbackgroundColor: #3b3c3d;
+    --snow2ndbackgroundColor: #222122;
+    --snow3rdbackgroundColor: #5b656d;
     
-    --panelColor1: #bab1ab26;
-    --panelColor2: #19191abe;
-    --panelColor2point5: #8c8b920e;
-    --panelColor3: #57565bb8;
-    --panelColor4: #2e2f304d;
+    --snowpanelColor1: #bab1ab26;
+    --snowpanelColor2: #19191abe;
+    --snowpanelColor2point5: #8c8b920e;
+    --snowpanelColor3: #57565bb8;
+    --snowpanelColor4: #2e2f304d;
 
-    --gradient1: linear-gradient(to bottom, var(--panelColor1), var(--panelColor2));
-    --gradient2: linear-gradient(to bottom, var(--fontColor1), var(--fontColor2));
+    --snowgradient1: linear-gradient(to bottom, var(--snowpanelColor1), var(--snowpanelColor2));
+    --snowgradient2: linear-gradient(to bottom, var(--snowfontColor1), var(--snowfontColor2));
 
-    --fontColor1: rgba(200, 223, 226, 0.961);
-    --fontColor1point5: rgba(159, 180, 195, 0.902);
-    --fontColor2: rgba(141, 254, 246, 0.961);
-    --fontColordisabled: rgba(149, 163, 157, 0.961);
+    --snowfontColor1: rgba(200, 223, 226, 0.961);
+    --snowfontColor1point5: rgba(159, 180, 195, 0.902);
+    --snowfontColor2: rgba(141, 254, 246, 0.961);
+    --snowfontColordisabled: rgba(149, 163, 157, 0.961);
 
-    --glowColor1: rgba(240, 245, 229, 0.872);
-    --glowColor2: rgba(162, 241, 255, 0.932);
-    --glowColor3: rgb(193, 255, 196);
-    --glowcolor4: #91ffcc;
+    --snowglowColor1: rgba(240, 245, 229, 0.872);
+    --snowglowColor2: rgba(162, 241, 255, 0.932);
+    --snowglowColor3: rgb(193, 255, 196);
+    --snowglowcolor4: #91ffcc;
 
     /*Red image*/
     --image2: url(images/emile-seguin-R9OueKOtGGU-unsplash.jpg);
@@ -44,10 +44,10 @@ html, body {
     position: absolute;
     width: 100%;
     height: 50px;
-    background-color: var(--2ndbackgroundColor);
+    background-color: var(--snow2ndbackgroundColor);
     top: 0;
     left: 0;
-    color: var(--fontColor1);
+    color: var(--snowfontColor1);
 }
 .navbar {
     display: flex;
@@ -58,7 +58,7 @@ html, body {
     list-style: none;
 }
 .theme-select {
-    color: var(--fontColor1);
+    color: var(--snowfontColor1);
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
@@ -68,7 +68,7 @@ body{
     align-items: center;
 
     /*Background properties*/
-    background-color: var(--1stbackgroundColor);
+    background-color: var(--snow1stbackgroundColor);
     background-image: var(--image2);
     background-position: center;
     background-repeat: no-repeat;
@@ -99,8 +99,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--panelColor1);
-    background-image: var(--gradient1);
+    background-color: var(--snowpanelColor1);
+    background-image: var(--snowgradient1);
     backdrop-filter: blur(25px);
     border-radius: 10px;
     width: 480px;
@@ -112,10 +112,10 @@ a top and a bottom level*/
 .display {
     width: 450px;
     height: 160px;
-    background-color: var(--panelColor2);
+    background-color: var(--snowpanelColor2);
     margin: 15px auto;
     border-radius: 15px;
-    box-shadow: 0 0 15px 0 var(--glowColor1);
+    box-shadow: 0 0 15px 0 var(--snowglowColor1);
 }
 
 .topDisplay{
@@ -125,7 +125,7 @@ a top and a bottom level*/
     margin: 10px auto;
 
     /*font properties*/
-    color: var(--fontColor1point5);
+    color: var(--snowfontColor1point5);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     text-align: right;
@@ -138,9 +138,9 @@ a top and a bottom level*/
     margin: 10px auto;
 
     /*font properties*/
-    color: var(--fontColor1);
+    color: var(--snowfontColor1);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 4.5rem;
+    font-size: 1.5rem;
     text-align: right;
 }
 #bottomContent {
@@ -153,7 +153,7 @@ a top and a bottom level*/
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: var(--panelColor2);
+    background-color: var(--snowpanelColor2);
     padding: 10px 10px 15px 10px;
     border-radius: 10px;
 }
@@ -169,36 +169,36 @@ input {
     height: 88px;
     border-radius: 10px;
     border: none;
-    background-color: var(--panelColor2point5);
-    color: var(--fontColor1);
+    background-color: var(--snowpanelColor2point5);
+    color: var(--snowfontColor1);
     font-size: 1.5rem;
 }
 input:not(:enabled) {
-    background-color: var(--panelColor4);
-    color: var(--fontColordisabled);
+    background-color: var(--snowpanelColor4);
+    color: var(--snowfontColordisabled);
 }
 input:hover:enabled {
-    box-shadow: 0 0 10px 0 var(--glowColor1);
-    color: var(--fontColor2);
+    box-shadow: 0 0 10px 0 var(--snowglowColor1);
+    color: var(--snowfontColor2);
 }
 input:active:enabled {
-    background-color: var(--panelColor3);
-    box-shadow: 0 0 10px 0 var(--glowColor3);
-    color: var(--fontColor2);
+    background-color: var(--snowpanelColor3);
+    box-shadow: 0 0 10px 0 var(--snowglowColor3);
+    color: var(--snowfontColor2);
 }
 
 .number {
-    background-color: var(--panelColor3);
+    background-color: var(--snowpanelColor3);
 }
 .number:hover {
-    background-color: var(--panelColor2point5);
+    background-color: var(--snowpanelColor2point5);
 }
 .number:active {
-    background-color: var(--panelColor2);
+    background-color: var(--snowpanelColor2);
 }
 a {
     text-decoration: none;
-    color: var(--fontColor1);
+    color: var(--snowfontColor1);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
 }
