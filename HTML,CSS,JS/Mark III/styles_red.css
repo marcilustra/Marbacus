@@ -196,3 +196,9 @@ input:active:enabled {
 .number:active {
     background-color: var(--panelColor2);
 }
+a {
+    text-decoration: none;
+    color: var(--fontColor1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
