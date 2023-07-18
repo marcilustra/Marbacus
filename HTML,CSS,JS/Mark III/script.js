@@ -35,7 +35,11 @@ function clearAll() {
 function deleteCut() {
     var del = document.getElementById("bottomContent").innerHTML;
     if (del.length > 1) {
-        document.getElementById("bottomContent").innerHTML = del.substring(0, del.length - 1);
+        if(del.charAt(del.length - 2) === ",") {
+            document.getElementById("bottomContent").innerHTML = formatNumberWithCommas(del.substring(0, del.length - 2));
+        }else{
+            document.getElementById("bottomContent").innerHTML = formatNumberWithCommas(del.substring(0, del.length - 1));
+        }
     } else {
         document.getElementById("bottomContent").innerHTML = "0";
     }
