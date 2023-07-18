@@ -22,3 +22,14 @@ function deleteCut() {
 function clearBottom() {
     document.getElementById("bottomContent").innerHTML = "0";
 }
+
+//Change themes
+function changeThemeLava() {
+    document.getElementById("styles_header").setAttribute("href", "styles_red.css");
+}
+function changeThemeMidnight() {
+    document.getElementById("styles_header").setAttribute("href", "styles_blue.css");
+}
+function changeThemeSnow() {
+    document.getElementById("styles_header").setAttribute("href", "styles_snow.css");
+}
