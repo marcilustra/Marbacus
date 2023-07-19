@@ -61,8 +61,6 @@ function appendNumber (val) {
     if(labelText.slice(0) === "0" || answered) {
         document.getElementById("bottom").textContent = val;
         answered = false;
-    } else if (labelText.includes("-")){
-        document.getElementById("bottom").textContent += val;
     } else {
         document.getElementById("bottom").textContent += val;
     }
@@ -82,35 +80,23 @@ function dotIT (val) {
 /*In conjuction with StrictEval(), this function checks
 the previous operator and if there is text on the top label first*/
 function performOperation(val) {
-    clickSound("audio/snap.wav");
+    //First we should check if a number if zero
+    //This way we can work with negative numbers b
+    clickSound("audio/snap.wav")
     var labelText = document.getElementById("bottom").textContent;
     var topLabelText = document.getElementById("top").textContent;
   
     if (topLabelText === "") {
-        if (labelText === "0") {
-            document.getElementById("bottom").textContent = "-";
-        } else {
-            output = parseFloat(labelText);
-        }
+      output = parseFloat(labelText);
     } else {
-        strictEval();
+      strictEval();
     }
   
     left = output;
-    if (val === "-") {
-        if (document.getElementById("bottom").textContent === "-") {
-            document.getElementById("top").textContent = document.getElementById("top").textContent.slice(0, -1) + val;
-        } else {
-            document.getElementById("top").textContent = left + " " + val;
-            document.getElementById("bottom").textContent = "";
-        }
-    } else {
-        document.getElementById("top").textContent = left + " " + val;
-        document.getElementById("bottom").textContent = "0";
-    }
+    document.getElementById("top").textContent = left + " " + val;
+    document.getElementById("bottom").textContent = "0";
+    
 }
-
-
   
 function strictEval() {
     let finaloperand = document.getElementById("top").textContent.slice(-1);
