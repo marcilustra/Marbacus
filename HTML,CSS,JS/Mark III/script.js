@@ -84,10 +84,11 @@ function appendNumber(number) {
     bottomContent.textContent = formattedNumber;
 }
   
-  // Function to format the number with commas
+// Function to format the number with commas
 function formatNumberWithCommas(number) {
-   var numericValue = Number(number.replace(/,/g, ""));
-   return new Intl.NumberFormat('en-US', { maximumFractionDigits: 20 }).format(numericValue);
+    var parts = number.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
 }
 //#endregion Decimal and Number Appending END
 
