@@ -19,6 +19,13 @@ Allowing for different themes depending on the user's choice.
 ![image](https://github.com/marcilustra/Marbacus/assets/111253348/1ccd95fb-b352-40a6-bfb3-3bd35b0760c1)
 Background Photo by <a href="https://unsplash.com/es/@pramodtiwari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pramod Tiwari</a> on <a href="https://unsplash.com/t/3d-renders?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
+![image](https://github.com/marcilustra/Marbacus/assets/111253348/b9c15d87-617e-4d6c-8b3d-5bb85c392c20)
+Background Photo by <a href="https://unsplash.com/@beingabstrac?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">rishi</a> on <a href="https://unsplash.com/s/photos/red-and-black?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+![image](https://github.com/marcilustra/Marbacus/assets/111253348/33246801-59c0-437d-a063-ac603db665db)
+Background Photo by <a href="https://unsplash.com/@emileseguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ÉMILE SÉGUIN ✳️✳️✳️</a> on <a href="https://unsplash.com/wallpapers/colors/white?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+
 ## Mark II
 First major change from Mark I is the theme. 
 Mark II uses a light blue theme with a glowing cyan display that has two levels.
