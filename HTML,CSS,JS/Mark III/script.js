@@ -1,3 +1,7 @@
+//#region Global Variables
+var output = 0;
+var left = 0;
+
 //#region Operator Functions
 //We need a way to check if the top has a current operation going on
 //but first if it does not, we add the number inserted at the bottom, if it is not a zero
@@ -14,16 +18,16 @@ function strictEvaluation() {
     //Get the operator from the top content
     let operator = document.getElementById("topContent").innerHTML.slice(-1);
     let bottomContent = document.getElementById("bottomContent").innerHTML;
-    var result = 0;
+    
     switch (operator) {
         case "+":
-            result = parseFloat(topContent) + parseFloat(bottomContent);
+            output = parseFloat(topContent) + parseFloat(bottomContent);
             break;
         case "-":
-            result = parseFloat(topContent) - parseFloat(bottomContent);
+            output = parseFloat(topContent) - parseFloat(bottomContent);
             break;
         case "X":
-            result = parseFloat(topContent) * parseFloat(bottomContent);
+            output = parseFloat(topContent) * parseFloat(bottomContent);
             break;
         case "/":
             if (parseFloat(bottomContent) === 0) {
@@ -32,20 +36,20 @@ function strictEvaluation() {
                 bottomContent.textContent = "0";
             } else {
                 // Perform the division if the bottom content is not zero
-                result = parseFloat(topContent) / parseFloat(bottomContent);
+                output = parseFloat(topContent) / parseFloat(bottomContent);
             }
             break;
         case "%":
-            result = parseFloat(topContent) % parseFloat(bottomContent);
+            output = parseFloat(topContent) % parseFloat(bottomContent);
             break;
         case "^":
-            result = Math.pow(parseFloat(topContent), parseFloat(bottomContent));
+            output = Math.pow(parseFloat(topContent), parseFloat(bottomContent));
             break;
         default:
             break;
 
     }
-    document.getElementById("bottomContent").innerHTML = result;
+    document.getElementById("bottomContent").innerHTML = output;
 }
 
 //#endregion Operator Functions END
