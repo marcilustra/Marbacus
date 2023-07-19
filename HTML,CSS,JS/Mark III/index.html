@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marbacus III</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="styles_header" rel="stylesheet" href="styles_red.css">
+    <script src="script.js" defer></script>
 </head>
 <header>
     <nav id="nav-bar">
         <ul class="navbar">
+<<<<<<< HEAD
             <li class="theme-select">Midnight</li>
             <li class="theme-select">Lava</li>
             <li class="theme-select">Snow</li>
+=======
+          <div class="dropdown">
+            <button class="dropbtn">Themes</button>
+            <div class="dropdown-content">
+              <ul class="themes-list">
+                <li class="theme-select" onclick="changeTheme('styles_blue.css')"><a href="#">Midnight</a></li>
+                <li class="theme-select" onclick="changeTheme('styles_red.css')"><a href="#">Lava</a></li>
+                <li class="theme-select" onclick="changeTheme('styles_snow.css')"><a href="#">Snow</a></li>
+              </ul>
+            </div>
+          </div>
+>>>>>>> 8a953a916280437f848899898031534241f1544e
         </ul>
     </nav>
 </header>
@@ -19,52 +33,52 @@
     <div class="main-body">
         <div class="display">
             <div class="topDisplay">
-                <label class="topContent"></label>
+                <label id="topContent">12 * 45</label>
             </div>
             <div class="bottomDisplay">
-                <label class="bottomContent">0</label>
+                <label id="bottomContent">5660</label>
             </div>
         </div>
         <div class="buttons-panel">
   <div class="row" id="row-1">
-    <input type="button" value="AC" class="deletor">
-    <input type="button" value="DEL" class="deletor">
-    <input type="button" value="CE" class="deletor">
+    <input type="button" value="AC" class="deletor" onclick="clearAll()">
+    <input type="button" value="DEL" class="deletor" onclick="deleteCut()">
+    <input type="button" value="CE" class="deletor" onclick="clearBottom()">
     <input type="button" value="(" class="operator">
     <input type="button" value=")" class="operator">
   </div>
   <div class="row" id="row-2">
-    <input type="button" value="D" class="letter" disabled>
-    <input type="button" value="E" class="letter" disabled>
-    <input type="button" value="F" class="letter" disabled>
+    <input type="button" value="D" class="letter" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="E" class="letter" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="F" class="letter" disabled onclick="appendNumber(this.value)">
     <input type="button" value="!" class="operator">
     <input type="button" value="/" class="operator">
   </div>
   <div class="row" id="row-3">
-    <input type="button" value="C" class="letter" disabled>
-    <input type="button" value="7" class="number">
-    <input type="button" value="8" class="number">
-    <input type="button" value="9" class="number">
+    <input type="button" value="C" class="letter" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="7" class="number" onclick="appendNumber(this.value)">
+    <input type="button" value="8" class="number" onclick="appendNumber(this.value)">
+    <input type="button" value="9" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="X" class="operator">
   </div>
   <div class="row" id="row-4">
-    <input type="button" value="B" class="letter" disabled>
-    <input type="button" value="4" class="number">
-    <input type="button" value="5" class="number">
-    <input type="button" value="6" class="number">
+    <input type="button" value="B" class="letter" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="4" class="number" onclick="appendNumber(this.value)">
+    <input type="button" value="5" class="number" onclick="appendNumber(this.value)">
+    <input type="button" value="6" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="-" class="operator">
   </div>
   <div class="row" id="row-5">
-    <input type="button" value="A" class="letter" disabled>
-    <input type="button" value="1" class="number">
-    <input type="button" value="2" class="number">
-    <input type="button" value="3" class="number">
+    <input type="button" value="A" class="letter" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="1" class="number" onclick="appendNumber(this.value)">
+    <input type="button" value="2" class="number" onclick="appendNumber(this.value)">
+    <input type="button" value="3" class="number"onclick="appendNumber(this.value)">
     <input type="button" value="+" class="operator">
   </div>
   <div class="row" id="row-6">
     <input type="button" value="^" class="operator">
     <input type="button" value="+/-" class="operator">
-    <input type="button" value="0" class="number">
+    <input type="button" value="0" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="." class="operator">
     <input type="button" value="=" class="operator">
   </div>
@@ -73,6 +87,6 @@
 </body>
 <br>
 <footer class="bottomGear">
-    <script src="script.js"></script>
+    
 </footer>
 </html>
