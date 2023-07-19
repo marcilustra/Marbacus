@@ -27,10 +27,6 @@
     /*Blue image*/
     --image1: url(images/pramod-tiwari--Q8SZ4KIug4-unsplash.jpg);
     /*BnW image*/
-    --image2: url(images/dan-cristian-padure-zm1oNbYS7DY-unsplash.jpg);
-
-    --image3: url(images/s-tsuchiya-3e0yw5MssSU-unsplash.jpg);
-    --image4: url(images/shri-FTDCDqOxTEE-unsplash.jpg);
 }
 html, body {
     width: 100%;

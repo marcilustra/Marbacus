@@ -1,3 +1,15 @@
+//A function to add a decimal point to the number at the bottom
+function addDecimal() {
+    var bottomContent = document.getElementById("bottomContent");
+    var currentNumber = bottomContent.textContent;
+    //Check first if the number already has a decimal point
+    if(currentNumber.includes(".")) {
+        return;
+    }
+    //If not, add a decimal point
+    bottomContent.textContent += ".";
+}
+
 //Append numered buttons to bottom content
 function appendNumber(number) {
     var bottomContent = document.getElementById("bottomContent");
@@ -9,19 +21,19 @@ function appendNumber(number) {
       bottomContent.textContent += number;
     }
   
-    // Format the number if it exceeds 999 digits
+    // Format the number if it exceeds 3 digits
     var formattedNumber = formatNumberWithCommas(bottomContent.textContent);
+    //Append the formatted number to the bottom content
     bottomContent.textContent = formattedNumber;
-  }
+}
   
   // Function to format the number with commas
-  function formatNumberWithCommas(number) {
-    var numericValue = parseInt(number.replace(/,/g, ""));
-    return numericValue.toLocaleString();
-  }
-  
+function formatNumberWithCommas(number) {
+   var numericValue = Number(number.replace(/,/g, ""));
+   return new Intl.NumberFormat('en-US', { maximumFractionDigits: 20 }).format(numericValue);
+}
 
-//CLEAR FUNCTIONS
+// #region CLEAR FUNCTIONS
 //Clear all does as it says, it clears all the content in the top and bottom
 //in one click
 function clearAll() {
@@ -50,10 +62,10 @@ function deleteCut() {
 function clearBottom() {
     document.getElementById("bottomContent").innerHTML = "0";
 }
-//CLEAR FUNCTIONS END
+// #endregion CLEAR FUNCTIONS END
 
 
-//Change themes
+// #region THEME FUNCTIONS
 function changeTheme(filename) {
     var cssLink = document.getElementById("styles_header");
     cssLink.href = filename;
@@ -68,3 +80,5 @@ document.addEventListener("DOMContentLoaded", function () {
         cssLink.href = selectedCSS;
     }
 });
+
+// #endregion THEME FUNCTIONS END

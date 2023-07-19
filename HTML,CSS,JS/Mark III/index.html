@@ -27,10 +27,10 @@
     <div class="main-body">
         <div class="display">
             <div class="topDisplay">
-                <label id="topContent">12 * 45</label>
+                <label id="topContent"></label>
             </div>
             <div class="bottomDisplay">
-                <label id="bottomContent">5660</label>
+                <label id="bottomContent">0</label>
             </div>
         </div>
         <div class="buttons-panel">
@@ -73,7 +73,7 @@
     <input type="button" value="^" class="operator">
     <input type="button" value="+/-" class="operator">
     <input type="button" value="0" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="." class="operator">
+    <input type="button" value="." class="operator" onclick="addDecimal()">
     <input type="button" value="=" class="operator">
   </div>
 </div>
