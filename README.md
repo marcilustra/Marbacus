@@ -6,7 +6,8 @@ The name is a play on Marc and Abacus. (poorly done).
 # Navigation
 1. [HTML VERSION](#html-version) \
     a. [Mark 1](#mark-1) \
-    b. [Mark II](#mark-ii)
+    b. [Mark II](#mark-ii) \
+    c. [Mark III](#mark-iii)
 2. [VB Version](#vb-version) \
     a. [Mark 1](#mark-ivb)
 
