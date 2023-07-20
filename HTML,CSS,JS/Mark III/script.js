@@ -191,8 +191,8 @@ function clearBottom() {
 }
 // #endregion CLEAR FUNCTIONS END
 
-
 // #region THEME FUNCTIONS
+
 function changeTheme(filename) {
     var cssLink = document.getElementById("styles_header");
     cssLink.href = filename;
@@ -209,3 +209,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // #endregion THEME FUNCTIONS END
+
+// #region Mode Switching
+function toHex() {
+    var elementsToEnable = document.querySelectorAll(".letter");
+    var elementsToDisable = document.querySelectorAll(".special");
+
+    for (var i = 0; i < elementsToEnable.length; i++) {
+        elementsToEnable[i].disabled = false;
+    }
+    for (var i = 0; i < elementsToDisable.length; i++) {
+        elementsToDisable[i].disabled = true;
+    }
+}

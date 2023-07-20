@@ -26,7 +26,7 @@
               <ul class="themes-list">
                 <li class="theme-select"><a href="#">Binary<a/></li>
                   <li class="theme-select"><a href="#">Decimal<a/></li>
-                <li class="theme-select"><a href="#">Hexadecimal</a></li>
+                <li class="theme-select" onclick="toHex()"><a href="#">Hexadecimal</a></li>
               </ul>
             </div>
           </div>
@@ -55,7 +55,7 @@
     <input type="button" value="D" class="letter" disabled onclick="appendNumber(this.value)">
     <input type="button" value="E" class="letter" disabled onclick="appendNumber(this.value)">
     <input type="button" value="F" class="letter" disabled onclick="appendNumber(this.value)">
-    <input type="button" value="!" class="operator" onclick="permutate()">
+    <input type="button" value="!" class="operator special" onclick="permutate()">
     <input type="button" value="/" class="operator"onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-3">
@@ -80,10 +80,10 @@
     <input type="button" value="+" class="operator" onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-6">
-    <input type="button" value="^" class="operator" onclick="Operate(this.value)">
+    <input type="button" value="^" class="operator special" onclick="Operate(this.value)">
     <input type="button" value="+/-" class="operator" onclick="addSubtract()">
     <input type="button" value="0" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="." class="operator" onclick="addDecimal()">
+    <input type="button" value="." class="operator special" onclick="addDecimal()">
     <input type="button" value="=" class="operator" onclick="equals()">
   </div>
 </div>
