@@ -11,3 +11,11 @@
     50% {transform: translate(0, 10px);}
     100% {transform: translate(0, -0px);}
 }
+
+script.js
+// Function to format the number with commas
+function formatNumberWithCommas(number) {
+    var parts = number.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+}

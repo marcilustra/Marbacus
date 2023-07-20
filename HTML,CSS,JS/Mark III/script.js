@@ -6,6 +6,88 @@ var left = 0;
 //We need a way to check if the top has a current operation going on
 //but first if it does not, we add the number inserted at the bottom, if it is not a zero
 //along with the operator that has been clicked
+function Operate(operator) {
+    var topContent = document.getElementById("topContent");
+    var bottomContent = document.getElementById("bottomContent");
+    var currentNumber = bottomContent.textContent;
+    var currentOperator = topContent.textContent.slice(-1);
+
+    if (currentNumber === "0" && currentOperator !== "") {
+        return;
+    } else if (currentNumber === "0" && currentOperator === "") {
+        topContent.textContent = "0" + operator;
+        return;
+    } else if (currentNumber !== "0" && currentOperator === "") {
+        topContent.textContent = currentNumber + operator;
+        bottomContent.textContent = "0";
+        return;
+    } else if(currentNumber === "0" && currentOperator !== "") {
+        topContent.textContent = topContent.textContent.slice(0, -1) + operator;
+        return;
+    } else if (currentNumber !== "0" && currentOperator !== "") {
+        strictEvaluation();
+        topContent.textContent = output + operator;
+        bottomContent.textContent = "0";
+        return;
+    }
+}
+//A function to find the Factorial of a number
+function permutate() {
+    var bottomContent = document.getElementById("bottomContent");
+    var currentNumber = bottomContent.textContent;
+    var result = 1;
+    if (currentNumber.includes(".")) {
+        return;
+    }
+    if (currentNumber === "52") {
+        //Open a link to the deck of cards
+        window.open("https://youtu.be/hoeIllSxpEU");
+    }
+    if (currentNumber > 52) {
+        bottomContent.textContent = "Error: Number too large";
+        return;
+    }
+    if (currentNumber === "0") {
+        bottomContent.textContent = "1";
+        return;
+    } else {
+        for (var i = 1; i <= currentNumber; i++) {
+            result *= i;
+        }
+        bottomContent.textContent = result;
+    }
+}
+//This function will append a - sign or remove it depending on what is in the bottom content
+//If a number is in the bottom content, it will add a - sign to it
+//If a - sign is already in the bottom content, it will remove it
+//If the number is a zero it will not do anything
+function addSubtract() {
+    var bottomContent = document.getElementById("bottomContent");
+    var currentNumber = bottomContent.textContent;
+    if (currentNumber === "0") {
+        return;
+    } else if (currentNumber.includes("-")) {
+        bottomContent.textContent = currentNumber.substring(1);
+    } else {
+        bottomContent.textContent = "-" + currentNumber;
+    }
+}
+
+//We need to handle when the user presses the = button
+//The top content will be clear but only after a strictEvaluation() call
+//The bottom content will be the output of the strictEvaluation() call
+function equals() {
+    var topContent = document.getElementById("topContent");
+    var bottomContent = document.getElementById("bottomContent");
+    if (topContent.textContent === "") {
+        return;
+    } else {
+        strictEvaluation();
+        topContent.textContent = "";
+        bottomContent.textContent = parseFloat(output.toFixed(3));
+    }
+}
+
 
 //If the top content is empty, we add the number and the operator
 //Else we check if the top content has an operator, if it does, we carry out the operation
@@ -32,8 +114,8 @@ function strictEvaluation() {
         case "/":
             if (parseFloat(bottomContent) === 0) {
                 // Display an error message if the user tries to divide by zero
-                topContent.textContent = "Error: Division by zero";
-                bottomContent.textContent = "0";
+                document.getElementById("topContent").innerHTML = "Error: Division by zero";
+                bottomContent.textContent = "No divide by 0";
             } else {
                 // Perform the division if the bottom content is not zero
                 output = parseFloat(topContent) / parseFloat(bottomContent);
@@ -71,25 +153,16 @@ function addDecimal() {
 function appendNumber(number) {
     var bottomContent = document.getElementById("bottomContent");
     var currentNumber = bottomContent.textContent;
+    var intCount = (currentNumber.match(/\d/g) || []).length;
   
     if (currentNumber === "0") {
       bottomContent.textContent = number;
-    } else if (currentNumber.length < 19) {
+    } else if (currentNumber.length < 15) {
       bottomContent.textContent += number;
     }
-  
-    // Format the number if it exceeds 3 digits
-    var formattedNumber = formatNumberWithCommas(bottomContent.textContent);
-    //Append the formatted number to the bottom content
-    bottomContent.textContent = formattedNumber;
 }
   
-// Function to format the number with commas
-function formatNumberWithCommas(number) {
-    var parts = number.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return parts.join(".");
-}
+
 //#endregion Decimal and Number Appending END
 
 // #region CLEAR FUNCTIONS
@@ -98,7 +171,7 @@ function formatNumberWithCommas(number) {
 function clearAll() {
     document.getElementById("topContent").innerHTML = "";
     document.getElementById("bottomContent").innerHTML = "0";
-
+    output = 0;
 }
 
 //deleteCut removes the last item in the bottom content
@@ -106,12 +179,8 @@ function clearAll() {
 function deleteCut() {
     var del = document.getElementById("bottomContent").innerHTML;
     if (del.length > 1) {
-        if(del.charAt(del.length - 2) === ",") {
-            document.getElementById("bottomContent").innerHTML = formatNumberWithCommas(del.substring(0, del.length - 2));
-        }else{
-            document.getElementById("bottomContent").innerHTML = formatNumberWithCommas(del.substring(0, del.length - 1));
-        }
-    } else {
+        document.getElementById("bottomContent").innerHTML = del.substring(0, del.length - 1);
+        } else {
         document.getElementById("bottomContent").innerHTML = "0";
     }
 }

@@ -54,36 +54,36 @@
     <input type="button" value="D" class="letter" disabled onclick="appendNumber(this.value)">
     <input type="button" value="E" class="letter" disabled onclick="appendNumber(this.value)">
     <input type="button" value="F" class="letter" disabled onclick="appendNumber(this.value)">
-    <input type="button" value="!" class="operator">
-    <input type="button" value="/" class="operator">
+    <input type="button" value="!" class="operator" onclick="permutate()">
+    <input type="button" value="/" class="operator"onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-3">
     <input type="button" value="C" class="letter" disabled onclick="appendNumber(this.value)">
     <input type="button" value="7" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="8" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="9" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="X" class="operator">
+    <input type="button" value="X" class="operator" onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-4">
     <input type="button" value="B" class="letter" disabled onclick="appendNumber(this.value)">
     <input type="button" value="4" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="5" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="6" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="-" class="operator">
+    <input type="button" value="-" class="operator" onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-5">
     <input type="button" value="A" class="letter" disabled onclick="appendNumber(this.value)">
     <input type="button" value="1" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="2" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="3" class="number"onclick="appendNumber(this.value)">
-    <input type="button" value="+" class="operator">
+    <input type="button" value="+" class="operator" onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-6">
-    <input type="button" value="^" class="operator">
-    <input type="button" value="+/-" class="operator">
+    <input type="button" value="^" class="operator" onclick="Operate(this.value)">
+    <input type="button" value="+/-" class="operator" onclick="addSubtract()">
     <input type="button" value="0" class="number" onclick="appendNumber(this.value)">
     <input type="button" value="." class="operator" onclick="addDecimal()">
-    <input type="button" value="=" class="operator">
+    <input type="button" value="=" class="operator" onclick="equals()">
   </div>
 </div>
     </div>
