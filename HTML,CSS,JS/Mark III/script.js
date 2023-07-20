@@ -211,9 +211,23 @@ document.addEventListener("DOMContentLoaded", function () {
 // #endregion THEME FUNCTIONS END
 
 // #region Mode Switching
+
+//This function will switch the calculator to HEXADECIMAL mode
 function toHex() {
     var elementsToEnable = document.querySelectorAll(".letter");
     var elementsToDisable = document.querySelectorAll(".special");
+
+    for (var i = 0; i < elementsToEnable.length; i++) {
+        elementsToEnable[i].disabled = false;
+    }
+    for (var i = 0; i < elementsToDisable.length; i++) {
+        elementsToDisable[i].disabled = true;
+    }
+}
+
+function toDec() {
+    var elementsToEnable = document.querySelectorAll(".special");
+    var elementsToDisable = document.querySelectorAll(".letter");
 
     for (var i = 0; i < elementsToEnable.length; i++) {
         elementsToEnable[i].disabled = false;
