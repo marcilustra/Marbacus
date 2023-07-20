@@ -43,7 +43,7 @@ function permutate() {
         //Open a link to the deck of cards
         window.open("https://youtu.be/hoeIllSxpEU");
     }
-    if (currentNumber > 52) {
+    if (currentNumber > 15) {
         return;
     }
     if (currentNumber === "0") {
