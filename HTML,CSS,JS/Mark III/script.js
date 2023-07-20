@@ -44,7 +44,6 @@ function permutate() {
         window.open("https://youtu.be/hoeIllSxpEU");
     }
     if (currentNumber > 52) {
-        bottomContent.textContent = "Error: Number too large";
         return;
     }
     if (currentNumber === "0") {
