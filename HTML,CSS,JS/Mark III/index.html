@@ -24,7 +24,7 @@
             <button class="dropbtn">Modes</button>
             <div class="dropdown-content">
               <ul class="themes-list">
-                <li class="theme-select"><a href="#">Binary<a/></li>
+                <li class="theme-select" onclick="toBin()"><a href="#">Binary<a/></li>
                   <li class="theme-select" onclick="toDec()"><a href="#">Decimal<a/></li>
                 <li class="theme-select" onclick="toHex()"><a href="#">Hexadecimal</a></li>
               </ul>
@@ -52,38 +52,38 @@
     <input type="button" value=")" class="operator" disabled>
   </div>
   <div class="row" id="row-2">
-    <input type="button" value="D" class="letter" disabled onclick="appendNumber(this.value)">
-    <input type="button" value="E" class="letter" disabled onclick="appendNumber(this.value)">
-    <input type="button" value="F" class="letter" disabled onclick="appendNumber(this.value)">
-    <input type="button" value="!" class="operator special" onclick="permutate()">
+    <input type="button" value="D" class="letter nobin" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="E" class="letter nobin" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="F" class="letter nobin" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="!" class="operator nobin special" onclick="permutate()">
     <input type="button" value="/" class="operator"onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-3">
-    <input type="button" value="C" class="letter" disabled onclick="appendNumber(this.value)">
-    <input type="button" value="7" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="8" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="9" class="number" onclick="appendNumber(this.value)">
+    <input type="button" value="C" class="letter nobin" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="7" class="number nobin" onclick="appendNumber(this.value)">
+    <input type="button" value="8" class="number nobin" onclick="appendNumber(this.value)">
+    <input type="button" value="9" class="number nobin" onclick="appendNumber(this.value)">
     <input type="button" value="X" class="operator" onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-4">
-    <input type="button" value="B" class="letter" disabled onclick="appendNumber(this.value)">
-    <input type="button" value="4" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="5" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="6" class="number" onclick="appendNumber(this.value)">
+    <input type="button" value="B" class="letter nobin" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="4" class="number nobin" onclick="appendNumber(this.value)">
+    <input type="button" value="5" class="number nobin" onclick="appendNumber(this.value)">
+    <input type="button" value="6" class="number nobin" onclick="appendNumber(this.value)">
     <input type="button" value="-" class="operator" onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-5">
-    <input type="button" value="A" class="letter" disabled onclick="appendNumber(this.value)">
+    <input type="button" value="A" class="letter nobin" disabled onclick="appendNumber(this.value)">
     <input type="button" value="1" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="2" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="3" class="number"onclick="appendNumber(this.value)">
+    <input type="button" value="2" class="number nobin" onclick="appendNumber(this.value)">
+    <input type="button" value="3" class="number nobin"onclick="appendNumber(this.value)">
     <input type="button" value="+" class="operator" onclick="Operate(this.value)">
   </div>
   <div class="row" id="row-6">
-    <input type="button" value="^" class="operator special" onclick="Operate(this.value)">
-    <input type="button" value="+/-" class="operator" onclick="addSubtract()">
+    <input type="button" value="^" class="operator nobin special" onclick="Operate(this.value)">
+    <input type="button" value="+/-" class="operator special nobin" onclick="addSubtract()">
     <input type="button" value="0" class="number" onclick="appendNumber(this.value)">
-    <input type="button" value="." class="operator special" onclick="addDecimal()">
+    <input type="button" value="." class="operator nobin special" onclick="addDecimal()">
     <input type="button" value="=" class="operator" onclick="equals()">
   </div>
 </div>

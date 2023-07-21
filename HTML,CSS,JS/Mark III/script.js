@@ -226,12 +226,26 @@ function toHex() {
 }
 
 function toDec() {
-    var elementsToEnable = document.querySelectorAll(".special");
+    var elementsToEnable = document.querySelectorAll(".special", ".nobin");
+    var numbersToEnable = document.querySelectorAll(".nobin");
     var elementsToDisable = document.querySelectorAll(".letter");
+
+    for (var i = 0; i < numbersToEnable.length; i++) {
+        numbersToEnable[i].disabled = false;
+    }
 
     for (var i = 0; i < elementsToEnable.length; i++) {
         elementsToEnable[i].disabled = false;
     }
+    for (var i = 0; i < elementsToDisable.length; i++) {
+        elementsToDisable[i].disabled = true;
+    }
+}
+
+function toBin() {
+    //Disable all numbers except 0 and 1
+    var elementsToDisable = document.querySelectorAll(".nobin");
+    
     for (var i = 0; i < elementsToDisable.length; i++) {
         elementsToDisable[i].disabled = true;
     }
