@@ -223,6 +223,7 @@ function toHex() {
     for (var i = 0; i < elementsToDisable.length; i++) {
         elementsToDisable[i].disabled = true;
     }
+    currentMode = "hex";
 }
 
 function toDec() {
@@ -240,6 +241,7 @@ function toDec() {
     for (var i = 0; i < elementsToDisable.length; i++) {
         elementsToDisable[i].disabled = true;
     }
+    currentMode = "dec";
 }
 
 function toBin() {
@@ -249,4 +251,5 @@ function toBin() {
     for (var i = 0; i < elementsToDisable.length; i++) {
         elementsToDisable[i].disabled = true;
     }
+    currentMode = "bin";
 }
